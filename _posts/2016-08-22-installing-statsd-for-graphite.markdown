@@ -56,6 +56,8 @@ $ sudo vim exampleConfig.js
 #     , graphiteHost: "localhost"
 #     , port: 8125
 #     , backends: [ "./backends/graphite" ]
+#     , dumpMessages: true
+#     , log: { level: "LOG_DEBUG" }
 #   }
 {% endhighlight %}
 
