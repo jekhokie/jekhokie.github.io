@@ -1,0 +1,8 @@
+# jekyll content
+_site
+.sass-cache
+.jekyll-metadata
+
+# vim swap files
+*.swp
+*.swo
