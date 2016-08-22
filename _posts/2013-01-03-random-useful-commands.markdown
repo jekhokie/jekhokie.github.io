@@ -2,7 +2,7 @@
 layout: post
 title:  "Random Useful Commands"
 date:   2013-01-03 08:14:08 -0400
-categories: random linux ruby osx tcpdump java jnlp memory
+categories: random linux ruby osx tcpdump java jnlp memory virtualization vmware
 ---
 This post is a bunch of random useful commands, data points, installation instructions, etc. that I've collected over the last several years. The data contained within this post are things that I found useful at the time, were difficult to find/fix, or are generally just useful sysadmin commands to keep around for historical lookup purposes.
 
@@ -61,6 +61,21 @@ $ vim /etc/security/limits.d/<limit_name>.conf
 $ sudo tcpdump not port 22
 {% endhighlight %}
 
+### VirtualBox Command-Line
+
+Command-line commands to interact with the VirtualBox application.
+
+{% highlight bash %}
+# list all VMs
+$ VBoxManage list vms
+# list all runing VMs
+$ VBoxManage list runningvms
+# power down (hard) a VM
+$ VBoxManage controlvm <VM_ID> poweroff
+# delete a VM
+$ VBoxManage unregistervm <VM_ID> --delete
+{% endhighlight %}
+
 ## OSX
 
 ### "No Devices Detected" for Wifi
@@ -106,4 +121,18 @@ To force a garbage collection on OSX if the memory seems to be running unnecessa
 
 {% highlight bash %}
 $ sudo purge
+{% endhighlight %}
+
+### Re-Install VirtualBox with Extensions
+
+To re-install a VirtualBox setup on OSX.
+
+1. Uninstall any existing VirtualBox instances using the Uninstall script that comes with the .dmg.
+2. Reboot the machine.
+3. Run the installer for the new VirtualBox version.
+4. Download the corresponding extension packs.
+5. Install the extension packs from the command line:
+
+{% highlight bash %}
+$ VBoxManage extpack install Downloads/Oracle_VM_VirtualBox_Extension_Pack-4.2.10-84104.vbox-extpack
 {% endhighlight %}
