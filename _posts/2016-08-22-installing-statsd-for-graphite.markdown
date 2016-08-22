@@ -50,7 +50,7 @@ Edit the configuration file for your environment:
 $ cd /opt/statsd
 $ sudo vim exampleConfig.js
 # ensure at least the following values are specified
-# assumes graphite is running on the same host, and sets log levels to DEBUG
+# assumes graphite is running on the same host, grants 1 second resolution, and sets log levels to DEBUG
 #   {
 #       graphitePort: 2003,
 #     , graphiteHost: "localhost"
@@ -58,6 +58,7 @@ $ sudo vim exampleConfig.js
 #     , backends: [ "./backends/graphite" ]
 #     , dumpMessages: true
 #     , log: { level: "LOG_DEBUG" }
+#     , flushInterval: 1000
 #   }
 {% endhighlight %}
 

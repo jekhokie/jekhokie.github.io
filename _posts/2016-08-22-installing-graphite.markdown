@@ -82,15 +82,21 @@ $ sudo cp carbon.conf.example carbon.conf
 
 # whisper
 $ sudo cp storage-schemas.conf.example storage-schemas.conf
+# update the storage-schemas.conf file to update the default section with the following, which allows 1 second resolution
+#   ...
+#   retentions = 1:30d     # 1 second resolution for 30 days
+#   ...
 
 # graphite webapp
 $ sudo cp graphite.wsgi.example graphite.wsgi
 $ cd /opt/graphite/webapp/graphite
 $ sudo cp local_settings.py.example local_settings.py
-# update the local_settings.py file to uncomment and update the following, respective to your environment:
+# update the local_settings.py file to uncomment and update the following, respective to your environment. These
+# settings will ensure that the date/time is set correctly and that 1 second resolution is possible
 #   SECRET_KEY = 'super_secret_key'
 #   TIME_ZONE = 'America/New_York'
 #   MEMCACHE_HOSTS = ['127.0.0.1:11211']
+#   MEMCACHE_DURATION = 1
 {% endhighlight %}
 
 Create the carbon group and user for the carbon service:
