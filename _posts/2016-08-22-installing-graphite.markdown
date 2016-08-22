@@ -8,14 +8,10 @@ Instructions related to the installation and configuration of [Graphite](http://
 Note that these instructions follow the "Install from Source" process from the documentation in order to facilitate the highest
 level of configurability.
 
-### Technology Stack/Prerequisites
+### Warning
 
-Assumes the following are already installed/ready for use:
-
-* Ubuntu 16.04
-* Graphite
-* Vagrant (used to stand up Ubuntu 16.04 VM)
-* Git
+Note that the resulting Graphite setup from these instructions is **NOT** for production use. These instructions are for setting up
+an initial test/dev setup of Graphite to understand how the application functions.
 
 ### Dependencies
 
