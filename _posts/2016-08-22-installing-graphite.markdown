@@ -120,10 +120,10 @@ $ sudo chown www-data:www-data /opt/graphite/storage/graphite.db
 $ sudo mkdir -p /opt/graphite/storage/log/carbon-cache
 $ sudo mkdir -p /opt/graphite/storage/log/carbon-relay
 $ sudo mkdir -p /opt/graphite/storage/log/carbon-aggregator
-$ sudo chown -R carbonusr:carbonusr /opt/graphite/storage/log
+$ sudo chown -R carbonusr:carbon /opt/graphite/storage/log
 $ sudo chmod 775 /opt/graphite/storage
 $ sudo chown -R carbonusr /opt/graphite/storage/whisper
-$ sudo chown www-data:carbonusr /opt/graphite/storage
+$ sudo chown www-data:carbon /opt/graphite/storage
 $ sudo chown -R www-data /opt/graphite/storage/log/webapp
 {% endhighlight %}
 
