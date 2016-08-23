@@ -2,7 +2,7 @@
 layout: post
 title:  "Installing Graphite"
 date:   2016-08-22 04:36:04 -0400
-categories: ubuntu graphite
+categories: ubuntu graphite carbon whisper
 ---
 Tutorial related to the installation and configuration of [Graphite](http://graphiteapp.org/) on
 an Ubuntu 16.04 virtual machine. Note that these instructions follow the "Install from Source" process
