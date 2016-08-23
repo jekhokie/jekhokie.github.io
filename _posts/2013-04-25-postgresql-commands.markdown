@@ -4,6 +4,9 @@ title:  "PostgreSQL Commands and Sockets"
 date:   2013-04-25 09:43:21 -0400
 categories: postgres sql
 ---
+Collection of commands and information related to interaction with a PostgreSQL database. These are
+likely rudimentary but are useful for needing to remember them after not having worked with the
+database for some time.
 
 ## Commands
 

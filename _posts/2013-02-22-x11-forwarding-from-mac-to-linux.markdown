@@ -4,7 +4,10 @@ title:  "X11 Forwarding from Mac OSX to Linux"
 date:   2013-02-22 11:14:01 -0400
 categories: linux x11 osx ssh
 ---
-To enable GUI interaction with a Linux VM over SSH from a Mac OSX instance, X11 forwarding can be used. The following are steps to install, configure, and run tools/commands related to establishing GUI sessions with remote Linux instances (assuming they allow it/X11 forwarding is not explicitly disallowed by the SSH settings on the VM or a remote firewall).
+To enable GUI interaction with a Linux VM over SSH from a Mac OSX instance, X11 forwarding can be used.
+The following are steps to install, configure, and run tools/commands related to establishing GUI sessions
+with remote Linux instances (assuming they allow it/X11 forwarding is not explicitly disallowed by the SSH
+settings on the VM or a remote firewall).
 
 ## OSX Software Installation
 

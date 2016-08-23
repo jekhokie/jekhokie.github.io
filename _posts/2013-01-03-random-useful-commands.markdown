@@ -4,7 +4,10 @@ title:  "Random Useful Commands"
 date:   2013-01-03 08:14:08 -0400
 categories: random linux ruby osx tcpdump java jnlp memory virtualization vmware
 ---
-This post is a bunch of random useful commands, data points, installation instructions, etc. that I've collected over the last several years. The data contained within this post are things that I found useful at the time, were difficult to find/fix, or are generally just useful sysadmin commands to keep around for historical lookup purposes.
+This post is a bunch of random useful commands, data points, installation instructions, etc. that I've
+collected over the last several years. The data contained within this post are things that I found useful
+at the time, were difficult to find/fix, or are generally just useful sysadmin commands to keep around
+for historical lookup purposes.
 
 ## Ruby
 

@@ -4,9 +4,9 @@ title:  "Installing Graphite"
 date:   2016-08-22 04:36:04 -0400
 categories: ubuntu graphite
 ---
-Instructions related to the installation and configuration of [Graphite](http://graphiteapp.org/) on an Ubuntu 16.04 virtual machine.
-Note that these instructions follow the "Install from Source" process from the documentation in order to facilitate the highest
-level of configurability.
+Instructions related to the installation and configuration of [Graphite](http://graphiteapp.org/) on
+an Ubuntu 16.04 virtual machine. Note that these instructions follow the "Install from Source" process
+from the documentation in order to facilitate the highest level of configurability.
 
 ### Warning
 

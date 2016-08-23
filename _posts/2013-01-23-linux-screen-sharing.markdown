@@ -4,7 +4,8 @@ title:  "Linux Screen Sharing using screen"
 date:   2013-01-23 13:28:31 -0400
 categories: linux screen
 ---
-To share a screen session (screen is a Linux-based software package which allows multiple TTY sessions under the same console window) with a fellow developer/other, the following commands can be useful.
+To share a screen session (screen is a Linux-based software package which allows multiple TTY sessions
+under the same console window) with a fellow developer/other, the following commands can be useful.
 
 ## Software Installation/Configuration
 
