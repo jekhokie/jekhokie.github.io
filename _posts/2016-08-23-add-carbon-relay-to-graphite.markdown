@@ -5,8 +5,8 @@ date:   2016-08-23 12:43:14 -0400
 categories: ubuntu graphite carbon whisper relay
 ---
 Tutorial related to expanding on on the initial Graphite installation approach
-[here]({% post_url 2016-08-22-installing-graphite %}) and adding a Carbon Relay instance to send metrics
-to multiple Carbon Cache instances.
+[here]({% post_url 2016-08-22-installing-graphite-bleeding-edge %}) and adding a Carbon Relay instance
+to send metrics to multiple Carbon Cache instances.
 
 ### Warning
 
