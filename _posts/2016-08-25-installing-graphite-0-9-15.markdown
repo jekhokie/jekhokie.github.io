@@ -30,7 +30,6 @@ $ sudo -E pip install "cffi>=1.7.0"
 $ sudo -E pip install "django==1.6"
 $ sudo -E pip install "django-tagging<0.4"
 $ sudo -E pip install pytz enum34
-$ sudo -E pip install python-cffi libfontconfig1-dev libfreetype6-dev
 $ sudo -E pip install fontconfig
 $ sudo -E pip install python-memcached
 $ sudo -E pip install cairocffi
@@ -70,8 +69,10 @@ Create the configuration (default) files:
 # carbon config
 $ cd /opt/graphite/conf
 $ sudo cp carbon.conf.example carbon.conf
-# update the following configuration parameter in the carbon.conf file to ensure not running as superuser
+# update the following configuration parameter in the carbon.conf file
+# ensures it does not run as superuser, and increases the max updates/sec
 #   USER = _graphite
+#   MAX_UPDATES_PER_SECOND = 800
 
 # whisper config
 $ cd /opt/graphite/conf
@@ -96,6 +97,12 @@ $ sudo cp local_settings.py.example local_settings.py
 #   MEMCACHE_HOSTS = ['127.0.0.1:11211']
 {% endhighlight %}
 
+Perform the database migration for graphite-web:
+
+{% highlight bash %}
+$ sudo -E PYTHONPATH=/opt/graphite/webapp django-admin.py syncdb --settings=graphite.settings --noinput
+{% endhighlight %}
+
 Configure permissions for the various users:
 
 {% highlight bash %}
@@ -109,12 +116,6 @@ $ sudo -E chown -R _graphite /opt/graphite/storage/whisper
 $ sudo -E chown www-data:_graphite /opt/graphite/storage
 $ sudo -E chown www-data:_graphite /opt/graphite/conf/graphite.wsgi
 $ sudo -E chown -R www-data /opt/graphite/storage/log/webapp
-{% endhighlight %}
-
-Perform the database migration for graphite-web:
-
-{% highlight bash %}
-$ sudo -E PYTHONPATH=/opt/graphite/webapp django-admin.py syncdb --settings=graphite.settings --noinput
 {% endhighlight %}
 
 Configure the Apache instance for the Graphite Web application:
