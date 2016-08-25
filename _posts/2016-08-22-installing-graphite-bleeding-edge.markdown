@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Installing Graphite"
+title:  "Installing Graphite - Bleeding Edge (0.10)"
 date:   2016-08-22 04:36:04 -0400
 categories: ubuntu graphite carbon whisper
 ---
-Tutorial related to the installation and configuration of [Graphite](http://graphiteapp.org/) on
+**Version 0.10** Tutorial related to the installation and configuration of [Graphite](http://graphiteapp.org/) on
 an Ubuntu 16.04 virtual machine. Note that these instructions follow the "Install from Source" process
-from the documentation in order to facilitate the highest level of configurability.
+from the documentation in order to facilitate the highest level of configurability, and assume the
+"bleeding-edge" version at the time of this post (version 0.10, which is still currently in development).
 
 ### Warning
 
