@@ -139,7 +139,7 @@ $ sudo cp /opt/graphite/examples/example-graphite-vhost.conf /etc/apache2/sites-
 # ...
 {% endhighlight %}
 
-Disable the default site, enable the Graphite Web application, and start Apache to serve the application:
+Disable the default site and enable the Graphite Web application:
 
 {% highlight bash %}
 # disable the default site
@@ -147,9 +147,6 @@ $ sudo -E a2dissite 000-default
 
 # enable the graphite-web application
 $ sudo -E a2ensite graphite-webapp
-
-# restart apache to start with the new configurations
-$ sudo -E service apache2 restart
 {% endhighlight %}
 
 Start the Carbon Cache daemon and ensure it is running:
@@ -159,6 +156,12 @@ $ sudo -E /opt/graphite/bin/carbon-cache.py start
 # to check the status of the carbon-cache daemon:
 $ sudo -E /opt/graphite/bin/carbon-cache.py status
 #   carbon-cache (instance a) is running with pid 15812
+{% endhighlight %}
+
+Restart (or start) Apache for enabling graphite-web:
+
+{% highlight bash %}
+$ sudo -E service apache2 restart
 {% endhighlight %}
 
 #### Validation
