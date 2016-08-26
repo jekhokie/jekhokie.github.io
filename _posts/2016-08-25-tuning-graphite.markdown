@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Turning Graphite - Version 0.9.15"
+title:  "Tuning Graphite - Version 0.9.15"
 date:   2016-08-25 20:22:31 -0400
 categories: ubuntu graphite carbon whisper tuning
 ---
