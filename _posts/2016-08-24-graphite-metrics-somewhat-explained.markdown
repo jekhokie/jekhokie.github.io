@@ -4,7 +4,7 @@ title:  "Graphite Metrics (Somewhat) Explained"
 date:   2016-08-24 09:34:04 -0400
 categories: graphite carbon whisper metrics
 ---
-In my question to figure out how to tune Graphite, it became very quickly apparent that a good source
+In my quest to figure out how to tune Graphite, it became very quickly apparent that a good source
 explaining what each Carbon Cache metric stands for in the cache reporting was lacking. I found
 [this](https://answers.launchpad.net/graphite/+question/145032) particular source, which I'm detailing
 below for reference:
