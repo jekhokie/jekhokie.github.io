@@ -67,10 +67,15 @@ MAX_CREATES_PER_MINUTE = 50
 
 ### Graphs - Overview
 
+**Note:** each graph below contains two "Trials" - one for each of the t2.large tests that were performed.
+
 The Grafana overall dashboard was set up like below. Some of the graphs were redundant, but helped paint the
 picture of what was going on with the stack:
 
+**Trial 1**
 [![Overall Dashboard][1]][1]
+**Trial 2**
+[![Overall Dashboard][9]][9]
 
 In summary, the t2.large instance did fairly well. It took just about 2 hours to fully ingest all metrics at
 a starting rate of about 5 million metrics per minute (CPU burst helped), and tapered down closer to 2 million
@@ -80,7 +85,10 @@ would not be able to be sustained (and the memory consumption would likely take 
 
 Drilling into each graph in the dashboard a bit...
 
+**Trial 1**
 [![Received vs Committed][2]][2]
+**Trial 2**
+[![Received vs Committed][10]][10]
 
 The graph above, related to the received metrics vs. committed metrics (with the memory overlay), demonstrates
 some raw performance metrics related to the Graphite setup. The very first block of time (from 10:40 to
@@ -94,14 +102,20 @@ throughput between the script and the Carbon cache). However, during this timefr
 floated between 1-2.25 million metrics/minute with a much more consistent/close `committedPoints` metric, which was
 very positive.
 
+**Trial 1**
 [![Points Written per Minute][3]][3]
+**Trial 2**
+[![Points Written per Minute][11]][11]
 
 In the "Datapoints written per minute" graph above, the scale makes it a bit difficult to see - however, zooming
 into the real data shows that the result is fairly what we expect, which is that the `committedPoints` metric is
 roughly the product of the `updateOperations` times `pointsPerUpdate` metrics. Again, the front portion of the
 graph represents the larger incoming `metricsReceived` from the prior graph of around 5 million metrics/minute.
 
+**Trial 1**
 [![Cache Operations][4]][4]
+**Trial 2**
+[![Cache Operations][12]][12]
 
 The next interesting graph is the above, which shows most of the metrics related to the Carbon cache in one single
 view. Up front, the instance is working extremely hard, and the metrics data points are rather smoothed. However,
@@ -109,18 +123,30 @@ as the processor dips and the `metricsReceived` decrease to around 2 million met
 with the Carbon cache instance exhibit more of a saw-tooth characteristic, which is more in line with what we would
 expect for a stable Graphite setup that is generally keeping up with the `metricsReceived`.
 
+**Trial 1**
 [![Cache Size][5]][5]
+**Trial 2**
+[![Cache Size][13]][13]
 
 It is fairly difficult to see in the above graph (I should have used different colors) but the interesting metric
 in this graph is the cache size. At the maximum, the cache size grew to about 19 million data points, which is
 decently impressive. The queries on this graph are consistent with the combination of memcached and the Grafana
 dashboard, and the other metrics are not visible due to the graph scale.
 
+**Trial 1**
 [![CPU][6]][6]
+**Trial 2**
+[![CPU][14]][14]
 
+**Trial 1**
 [![Memory][7]][7]
+**Trial 2**
+[![Memory][15]][15]
 
+**Trial 1**
 [![IOPS][8]][8]
+**Trial 2**
+[![IOPS][16]][16]
 
 No graph analysis is complete without looking at the CPU, memory and disk operations. The above graphs for the Carbon
 cache instance match up with the behavior seen in prior graphs (and are consistent with each other). One item of note
@@ -142,3 +168,11 @@ there are many more data points to explore and much more time required to test, 
 [6]: /assets/images/2016-08-25-tuning-graphite-cpu.png
 [7]: /assets/images/2016-08-25-tuning-graphite-memory.png
 [8]: /assets/images/2016-08-25-tuning-graphite-iops.png
+[9]: /assets/images/2016-08-25-tuning-graphite-overall-dashboard-2.png
+[10]: /assets/images/2016-08-25-tuning-graphite-received-vs-committed-2.png
+[11]: /assets/images/2016-08-25-tuning-graphite-points-written-per-minute-2.png
+[12]: /assets/images/2016-08-25-tuning-graphite-cache-operations-2.png
+[13]: /assets/images/2016-08-25-tuning-graphite-cache-size-2.png
+[14]: /assets/images/2016-08-25-tuning-graphite-cpu-2.png
+[15]: /assets/images/2016-08-25-tuning-graphite-memory-2.png
+[16]: /assets/images/2016-08-25-tuning-graphite-iops-2.png
