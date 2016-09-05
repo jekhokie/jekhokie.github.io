@@ -2,7 +2,7 @@
 layout: post
 title:  "Random Useful Commands"
 date:   2013-01-03 08:14:08 -0400
-categories: random linux ruby osx tcpdump java jnlp memory virtualization vmware
+categories: random linux ruby osx tcpdump memory virtualization vmware
 ---
 This post is a bunch of random useful commands, data points, installation instructions, etc. that I've
 collected over the last several years. The data contained within this post are things that I found useful
@@ -106,16 +106,6 @@ following to fix:
 $ sudo rm -rf ~/Library/Keychains/<LONG_UUID>
 # reboot
 $ sudo reboot
-{% endhighlight %}
-
-### Error Attempting to Run JNLP
-
-When attempting to run a JNLP file, if clicking the file opens the Apple Store or displays messages
-such as "Bad Installation. No JRE found in configuration file", then run the following command to
-fix the issue:
-
-{% highlight bash %}
-$ sudo /usr/libexec/PlistBuddy -c "Delete :JavaWebComponentVersionMinimum" /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/XProtect.meta.plist
 {% endhighlight %}
 
 ### Unusually High Memory Consumption
