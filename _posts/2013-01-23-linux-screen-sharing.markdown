@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linux Screen Sharing using screen"
+title:  "Linux Screen Sharing Using Screen"
 date:   2013-01-23 13:28:31 -0400
 categories: linux screen
 ---
