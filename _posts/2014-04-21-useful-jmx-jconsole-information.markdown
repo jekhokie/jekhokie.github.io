@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Useful JMX/JConsole Information"
-date:   2013-04-21 13:16:48 -0400
+date:   2014-04-21 13:16:48 -0400
 categories: linux osx java jmx jconsole
 ---
 Somewhat related to an earlier Java post, this post is dedicated to useful JConsole information
