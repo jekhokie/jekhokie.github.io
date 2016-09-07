@@ -4,10 +4,10 @@ title:  "Useful JMX/JConsole Information"
 date:   2014-04-21 13:16:48 -0400
 categories: linux osx java jmx jconsole
 ---
-Somewhat related to an earlier Java post, this post is dedicated to useful JConsole information
-that does not warrant their own posts (too short, not enough information, etc). As before,
-**Platform** is specified to indicate the platform the process was tested on, but the process will
-very likely work on other platforms as well.
+Somewhat related to an earlier Java post [here]({% post_url 2013-02-22-useful-java-information %}), this
+post is dedicated to useful JConsole information that does not warrant their own posts (too short, not
+enough information, etc). As before, **Platform** is specified to indicate the platform the process was
+tested on, but the process will very likely work on other platforms as well.
 
 ## Enable Secure JMX Monitoring
 
