@@ -9,7 +9,7 @@ Instructions related to the installation and configuration of the
 instructions and documentation stem from an initial problem I had related to attemping to install the software
 using the Ruby Gem.
 
-## Problem - First Attempt
+### Problem - First Attempt
 
 The first attempt at installing the gem resulted in the following output:
 
@@ -25,7 +25,7 @@ Can't install RMagick 2.13.1. Can't find MagickWand.h.
 *** extconf.rb failed ***
 {% endhighlight %}
 
-## Solution
+### Solution
 
 To solve for the above, the following commands were run.
 

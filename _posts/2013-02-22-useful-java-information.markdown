@@ -10,7 +10,7 @@ this simply aggregates a bunch of useful blips of information into a single post
 specified to indicate the platform the process was tested on, but the process will very likely work
 on other platforms as well.
 
-## Enable Logging/Tracing for Java Web Start Application
+### Enable Logging/Tracing for Java Web Start Application
 
 **Platform**: OSX, Linux
 
@@ -19,7 +19,7 @@ can be used (may be more, these are the most useful I've found). After performin
 procedures and starting the application, log files and trace logging should be able to be found in
 the following directory: `~/.java/deployment/log/*`
 
-### Option 1: Control Panel (System-Level Enable)
+#### Option 1: Control Panel (System-Level Enable)
 
 This procedure will enable logging/trace for the system Java (all applications that are run):
 
@@ -30,7 +30,7 @@ $ ./ControlPanel
 #   select "Enable Tracing" and "Enable Logging"
 {% endhighlight %}
 
-### Option 2: Application Configuration (Application-Specific Enable)
+#### Option 2: Application Configuration (Application-Specific Enable)
 
 This procedure will enable logging/trace for a specific application:
 
@@ -42,7 +42,7 @@ $ vim <your_app>/.java/deployment/deployment.properties
 #   deployment.log=true
 {% endhighlight %}
 
-## Error Attempting to Run JNLP
+### Error Attempting to Run JNLP
 
 **Platform**: OSX
 
@@ -54,7 +54,7 @@ fix the issue:
 $ sudo /usr/libexec/PlistBuddy -c "Delete :JavaWebComponentVersionMinimum" /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/XProtect.meta.plist
 {% endhighlight %}
 
-## Switching Java Version on Mac OSX
+### Switching Java Version on Mac OSX
 
 **Platform**: OSX
 
@@ -96,7 +96,7 @@ $ sudo vim ~/.bash_profile
 Case and point - don't update your Java version by hand on OSX - the system Java installed and managed is not
 as flexible to manipulate as it would be on a *nix system.
 
-## Keystore for Java - Re-import with Updated Key Password
+### Keystore for Java - Re-import with Updated Key Password
 
 **Platform**: Linux
 
@@ -114,7 +114,7 @@ $ keytool -import -noprompt -trustcacerts -alias 'My Cert' -file <KEY_NAME>.asc 
 # re-import the key/certificate with new password
 {% endhighlight %}
 
-## Java Heap Dump
+### Java Heap Dump
 
 **Platform**: Linux
 

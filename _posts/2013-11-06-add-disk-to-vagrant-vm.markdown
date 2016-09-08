@@ -9,7 +9,7 @@ simply forgot to associate an additional disk/volume for storing information. Th
 process to attach a volume to an already-created VM that was created using Vagrant and lives
 in the [VirtualBox](https://www.virtualbox.org/) hypervisor.
 
-## Process
+### Process
 
 These steps provide one way to attach an external volume to an existing virtual machine
 created using Vagrant and running inside VirtualBox, and format it for use. Note that these

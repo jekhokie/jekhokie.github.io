@@ -9,12 +9,12 @@ The following are steps to install, configure, and run tools/commands related to
 with remote Linux instances (assuming they allow it/X11 forwarding is not explicitly disallowed by the SSH
 settings on the VM or a remote firewall).
 
-## OSX Software Installation
+### OSX Software Installation
 
 X sessions can be displayed on a Mac OSX instance using [XQuartz](https://www.xquartz.org/). First,
 download and install XQuartz using the supplied method [here](https://www.xquartz.org/).
 
-## Remote Linux SSH Configuration
+### Remote Linux SSH Configuration
 
 To enable X11 forwarding, the remote Linux system must have its SSH configurations adjusted to
 explicitly allow it (if not already configured). Edit the file /etc/ssh/ssh_config to ensure the
@@ -37,7 +37,7 @@ Following the configuration update, restart the SSH daemon:
 $ sudo service sshd restart
 {% endhighlight %}
 
-## Establish the Connection
+### Establish the Connection
 
 Once the above SSH configurations are set, a session can be established from the Mac OSX instance
 to the remote Linux instance. Run the following from the Mac OSX instance:
@@ -52,7 +52,7 @@ GUI was pre-installed on the remote Linux system, the session may just be establ
 for an application with GUI capability to open. Open any application (such as 'xclock') and the
 GUI application should appear on your OSX desktop.
 
-## Optional/Troubleshooting
+### Optional/Troubleshooting
 
 The following are potential optional components, depending on what the distro comes pre-installed with.
 

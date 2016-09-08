@@ -9,7 +9,7 @@ various security domains (i.e. PCI). However, this can be cumbersome for system 
 to access the hosts using the jump host due to the multiple SSH commands needed to be run. This
 is a simple SSH tunnel implementation to avoid the unnecessary "2-hop" jump host.
 
-## Process
+### Process
 
 When using a jump host, it is necessary to SSH twice (once to the jump host, and the second time
 to the destination host you wish to access) to reach your destination. The following steps set up

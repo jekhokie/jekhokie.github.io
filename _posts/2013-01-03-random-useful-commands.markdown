@@ -9,9 +9,9 @@ collected over the last several years. The data contained within this post are t
 at the time, were difficult to find/fix, or are generally just useful sysadmin commands to keep around
 for historical lookup purposes.
 
-## Ruby
+### Ruby
 
-### therubyracer dependencies
+#### therubyracer dependencies
 
 Specify the following in the gemfile, followed by bundle install:
 
@@ -21,9 +21,9 @@ gem 'libv8'
 gem 'therubyracer'
 {% endhighlight %}
 
-## Linux
+### Linux
 
-### Missing C Compiler
+#### Missing C Compiler
 
 In many cases, installing libraries and software requires compiling - if errors are thrown about
 a missing compiler, usually this can be resolved via the following (assuming a CentOS-like system -
@@ -39,7 +39,7 @@ $ export CC=/usr/bin/gcc
 At this point, you should be able to re-run your command and the compile commands should be able
 to use the `CC` environment variable successfully.
 
-### Soft and Hard ulimits
+#### Soft and Hard ulimits
 
 To list ulimit settings (global):
 
@@ -57,14 +57,14 @@ $ vim /etc/security/limits.d/<limit_name>.conf
 # place the contents of the limit in this file
 {% endhighlight %}
 
-### tcpdump
+#### tcpdump
 
 {% highlight bash %}
 # monitor all requests except port 22
 $ sudo tcpdump not port 22
 {% endhighlight %}
 
-### VirtualBox Command-Line
+#### VirtualBox Command-Line
 
 Command-line commands to interact with the VirtualBox application.
 
@@ -79,9 +79,9 @@ $ VBoxManage controlvm <VM_ID> poweroff
 $ VBoxManage unregistervm <VM_ID> --delete
 {% endhighlight %}
 
-## OSX
+### OSX
 
-### "No Devices Detected" for Wifi
+#### "No Devices Detected" for Wifi
 
 Very infrequently, I lost my internet connection and (seemingly) my entire wireless network adapter.
 Errors such as "No Devices Detected" that show up when attempting to connect to a wifi network were
@@ -96,7 +96,7 @@ Controller.
 
 This should reset the internal SMC and result in being able to connect to wifi networks.
 
-### Continuous Re-Prompt for Password
+#### Continuous Re-Prompt for Password
 
 When continuously being prompted for a password for the Local/Login keychain, perform the
 following to fix:
@@ -108,7 +108,7 @@ $ sudo rm -rf ~/Library/Keychains/<LONG_UUID>
 $ sudo reboot
 {% endhighlight %}
 
-### Unusually High Memory Consumption
+#### Unusually High Memory Consumption
 
 To force a garbage collection on OSX if the memory seems to be running unnecessarily high:
 
@@ -116,7 +116,7 @@ To force a garbage collection on OSX if the memory seems to be running unnecessa
 $ sudo purge
 {% endhighlight %}
 
-### Re-Install VirtualBox with Extensions
+#### Re-Install VirtualBox with Extensions
 
 To re-install a VirtualBox setup on OSX.
 

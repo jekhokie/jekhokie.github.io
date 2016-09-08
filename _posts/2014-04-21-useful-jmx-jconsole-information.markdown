@@ -9,7 +9,7 @@ post is dedicated to useful JConsole information that does not warrant their own
 enough information, etc). As before, **Platform** is specified to indicate the platform the process was
 tested on, but the process will very likely work on other platforms as well.
 
-## Enable Secure JMX Monitoring
+### Enable Secure JMX Monitoring
 
 **Platform**: Linux
 
@@ -72,7 +72,7 @@ Restart the Tomcat process to enable the JMX monitoring according to the configu
 $ sudo /etc/init.d/tomcat restart
 {% endhighlight %}
 
-## Tomcat JMX in Vm - Connection Refused Error
+### Tomcat JMX in Vm - Connection Refused Error
 
 **Platform**: Linux
 
@@ -90,7 +90,7 @@ $ sudo /etc/init.d/tomcat restart
 
 Following the aboe command, JMX will be accessible (assuming the default port) via `10.11.13.14:4231`.
 
-## JConsole Logging
+### JConsole Logging
 
 **Platform**: Linux
 

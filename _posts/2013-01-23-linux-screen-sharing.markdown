@@ -7,7 +7,7 @@ categories: linux screen
 To share a screen session (screen is a Linux-based software package which allows multiple TTY sessions
 under the same console window) with a fellow developer/other, the following commands can be useful.
 
-## Software Installation/Configuration
+### Software Installation/Configuration
 
 Install the software package:
 
@@ -22,7 +22,7 @@ $ sudo chmod u+s /usr/bin/screen
 $ sudo chmod 755 /var/run/screen
 {% endhighlight %}
 
-## Screen Session Initialization
+### Screen Session Initialization
 
 As a user wishing to start the screen session, create a screen session with a given name:
 
@@ -40,7 +40,7 @@ multiuser on <enter>
 acladd <joining_user_name>
 {% endhighlight %}
 
-## Screen Session Joining
+### Screen Session Joining
 
 As the joining user, run the following command to join a shared screen session:
 

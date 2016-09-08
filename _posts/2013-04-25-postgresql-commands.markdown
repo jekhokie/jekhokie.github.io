@@ -8,7 +8,7 @@ Collection of commands and information related to interaction with a PostgreSQL 
 likely rudimentary but are useful for needing to remember them after not having worked with the
 database for some time.
 
-## Commands
+### Commands
 
 Some useful commands for interacting with the PostgreSQL database.
 
@@ -35,22 +35,24 @@ $ create role <role_name>;
 $ alter role <role_name> with <role>;
 {% endhighlight %}
 
-## Initialization
+### Initialization
 
 When installing PostgreSQL, first initialize the database:
 
 {% highlight bash %}
 # PostgreSQL 8
 $ initdb
+
 # PostgreSQL 9
 $ pg_ctl initdb
 {% endhighlight %}
 
-Default socket locations are usually not sufficient - edit /data/pgdata/<data_dir>/postgresql.conf:
+Default socket locations are usually not sufficient - edit /data/pgdata/<data_dir\>/postgresql.conf:
 
 {% highlight bash %}
 # PostgreSQL 8
-$ unix_socket_directory = '/tmp'
+unix_socket_directory = '/tmp'
+
 # PostgreSQL 9
-$ unix_socket_directory = '/data/sockets'
+unix_socket_directory = '/data/sockets'
 {% endhighlight %}

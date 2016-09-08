@@ -9,13 +9,13 @@ host that is running the [CoreOS](https://coreos.com/) operating system. The tut
 [Vagrant](https://www.vagrantup.com/) to launch a VM capable of deploying and running Docker
 containers.
 
-## Note
+### Note
 
 CentOS hosts are known to have filesystem/mapper issues when run on Vagrant and attempting to
 launch a container through Docker. It's better to run the Linux host natively, or use something
 else like CoreOS, which is why this tutorial was put together.
 
-## Process
+### Process
 
 Install VirtualBox and Vagrant.
 
@@ -138,7 +138,7 @@ $ docker run -t -i --name amq amq /bin/bash
 $ docker run -d --name amq amq
 {% endhighlight %}
 
-## Extra Commands
+### Extra Commands
 
 This is a list of useful commands to interact with Docker:
 

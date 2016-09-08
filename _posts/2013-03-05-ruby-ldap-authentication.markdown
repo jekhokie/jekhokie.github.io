@@ -8,7 +8,7 @@ Quick code snippet related to authenticating users in Ruby using an LDAP endpoin
 that this authentication snippet is very basic (successful bind operation is all that is
 required).
 
-## Implementation
+### Implementation
 
 In order for the code snippet to work, the `ruby-ldap` gem must first be installed:
 

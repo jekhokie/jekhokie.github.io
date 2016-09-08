@@ -9,7 +9,7 @@ However, Mac OSX (at the time of this post) does not have an easy way to read/wr
 to/from an external NTFS drive. These instructions explain how to work around the
 issue of not being able to interact with an NTFS drive on OSX.
 
-## Process
+### Process
 
 Googling around, I was able to piece together a small workaround that enabled interaction
 with the NTFS file system on OSX. Many of the pieces/steps are taken from the sites mentioned
@@ -25,8 +25,10 @@ $ brew install ntfs-3g
 $ sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.orig
 $ sudo ln -s /usr/local/Cellar/ntfs-3g/2014.2.15/sbin/mount_ntfs /sbin/mount_ntfs
 $ brew install osxfuse
+
 # for info only, if curious
 $ brew info osxfuse
+
 $ sudo /bin/cp -RfX /usr/local/Cellar/osxfuse/2.6.4/Library/Filesystems/osxfusefs.fs /Library/Filesystems
 $ sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
 {% endhighlight %}
@@ -35,7 +37,7 @@ Once the above have been performed, detach and re-attach the external NTFS drive
 appear, and inspecting the "Get Info" option for the drive should show the drive mounted in read/write
 mode.
 
-## Credit
+### Credit
 
 Contributions to some of the above were gleaned from:
 

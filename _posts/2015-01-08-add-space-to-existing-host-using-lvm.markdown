@@ -9,7 +9,7 @@ virtual machine. This is especially useful if you do not wish to add an extra dr
 or have software/data that is being written to an existing partition that is not easily
 re-configurable.
 
-## Useful Commands
+### Useful Commands
 
 Some useful commands related to this type of task:
 
@@ -30,7 +30,7 @@ $ sudo fdisk -l
 $ sudo fdisk /dev/sdb
 {% endhighlight %}
 
-## Process
+### Process
 
 **Note**: The following process assumes the following:
 

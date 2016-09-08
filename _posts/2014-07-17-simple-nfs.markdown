@@ -8,7 +8,7 @@ Simple tutorial (very basic) on how to install and configure NFS for sharing a f
 between two hosts. This tutorial does not go into detail about the many capabilities of
 NFS but, rather, is a proof of concept exercise.
 
-## Process
+### Process
 
 To configure NFS for file system sharing between hosts, assume that we have two hosts
 `HOSTA` and `HOSTB`. Note that this process was tested on a CentOS system, but can likely
