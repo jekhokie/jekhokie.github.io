@@ -24,6 +24,19 @@
     }
 }
 
+.site-title:hover {
+    text-decoration: none;
+}
+
+.site-title .site-sub-title {
+    float: right;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 56px;
+    margin-left: 9px;
+    vertical-align: middle;
+}
+
 .site-nav {
     float: right;
     line-height: 56px;
