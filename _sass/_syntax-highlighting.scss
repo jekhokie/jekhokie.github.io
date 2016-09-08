@@ -1,6 +1,27 @@
 /**
  * Syntax highlighting styles
  */
+.highlight .lineno {
+    color: #aaa;
+    border: none;
+    border-radius: 0;
+    border-right: solid 1px;
+}
+
+.highlight .code pre {
+    border: none;
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+}
+
+.highlight code {
+    display: block;
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+}
+
 .highlight {
     background: #fff;
     @extend %vertical-rhythm;
