@@ -26,7 +26,7 @@ directory are default/out of box. The setup will enable JMX monitoring according
 * Password: Stored in file /opt/tomcat/current/conf/jmx.password
 * Roles: Monitor (read-only), Control (read/write)
 
-1. Edit the JAVA environment settings to add/adjust the required settings for secure JMX monitoring:
+Edit the JAVA environment settings to add/adjust the required settings for secure JMX monitoring:
 
 {% highlight bash %}
 $ sudo vim /opt/tomcat/current/bin/setenv.sh
@@ -39,7 +39,7 @@ $ sudo vim /opt/tomcat/current/bin/setenv.sh
 #   JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.password.file=/opt/tomcat/current/conf/jmx.password"
 {% endhighlight %}
 
-2. Add/edit a JMX Access file with the following content:
+Add/edit a JMX Access file with the following content:
 
 {% highlight bash %}
 $ sudo vim /opt/tomcat/current/conf/jmx.access
@@ -48,7 +48,7 @@ $ sudo vim /opt/tomcat/current/conf/jmx.access
 #   controlRole readwrite
 {% endhighlight %}
 
-3. Add/edit a JMX Password file with the following content (obviously replacing `<MONITOR_PASSWORD>` and
+Add/edit a JMX Password file with the following content (obviously replacing `<MONITOR_PASSWORD>` and
 `<CONTROL_PASSWORD>` with your respective settings):
 
 {% highlight bash %}
@@ -58,7 +58,7 @@ $ sudo vim /opt/tomcat/current/conf/jmx.password
 #   controlRole <CONTROL_PASSWORD>
 {% endhighlight %}
 
-4. Modify the permissions for the respective JMS access/password files. This is required in order for the JVM
+Modify the permissions for the respective JMS access/password files. This is required in order for the JVM
 to respect usage of the files (failure to do this will result in a Java Error on Tomcat start):
 
 {% highlight bash %}
@@ -66,7 +66,7 @@ $ sudo chmod 600 /opt/tomcat/current/conf/jmx.access
 $ sudo chmod 600 /opt/tomcat/current/conf/jmx.password
 {% endhighlight %}
 
-5. Restart the Tomcat process to enable the JMX monitoring according to the configuration files above:
+Restart the Tomcat process to enable the JMX monitoring according to the configuration files above:
 
 {% highlight bash %}
 $ sudo /etc/init.d/tomcat restart
