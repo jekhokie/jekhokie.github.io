@@ -1,23 +1,67 @@
 ---
 layout: default
+paginate: true
 ---
 
 <div class="home">
     <h1 class="page-heading">Infostream</h1>
 
     <ul class="post-list">
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
             <li>
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-                <h2>
+                <h2 class="post-link-container">
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 </h2>
+
+                <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
 
                 {{ post.excerpt }}
             </li>
         {% endfor %}
     </ul>
+
+    <nav class="pagination-nav" aria-label="...">
+        <ul class="pagination">
+            {% if paginator.previous_page %}
+                <li>
+                    <a href="{{ paginator.previous_page_path }}" aria-label="Previous">
+                        <span aria-hidden="true">Previous</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="disabled">
+                    <span class="previous">Previous</span>
+                </li>
+            {% endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+                    <li class="active">
+                        <a href="#">{{ page }}</a>
+                {% elsif page == 1 %}
+                    <li>
+                        <a href="{{ site.url }}">{{ page }}</a>
+                {% else %}
+                    <li>
+                        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                {% endif %}
+                </li>
+            </li>
+            {% endfor %}
+
+            {% if paginator.next_page %}
+                <li>
+                    <a href="{{ paginator.next_page_path }}" aria-label="Next">
+                        <span aria-hidden="true">Next</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="disabled">
+                    <span aria-hidden="true">Next</span>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 </div>

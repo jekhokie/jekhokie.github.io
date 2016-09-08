@@ -7,3 +7,9 @@ github_username: jekhokie
 
 # build settings
 markdown: kramdown
+
+paginate: 5
+
+# pagination settinsg
+gems:
+  - jekyll-paginate

@@ -134,6 +134,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (= 94)
+  jekyll-paginate
   json
   minima
 
