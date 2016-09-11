@@ -59,8 +59,8 @@ $ export PATH=/opt/graphite/bin:$PATH
 Create the Graphite group and user:
 
 {% highlight bash %}
-sudo -E groupadd _graphite
-sudo -E useradd -c "User for graphite" -g _graphite -s /dev/null _graphite
+$ sudo -E groupadd _graphite
+$ sudo -E useradd -c "User for graphite" -g _graphite -s /dev/null _graphite
 {% endhighlight %}
 
 Create the configuration (default) files:
