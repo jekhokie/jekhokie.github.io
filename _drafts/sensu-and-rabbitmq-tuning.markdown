@@ -17,6 +17,27 @@ to collect the best practices into a consolidated post for reference.
 
 TODO: FILLMEIN
 
+### Sensu Check Counts
+
+One very useful item to monitor is the total number of checks that the Sensu setup is running. This
+metric can be tracked/forwarded to a Graphite/other Time-Series Database to evaluate the consumption
+of your Sensu stack and add to the metrics associated with watching performance of your stack.
+
+The idea is simple - using the Results API, you can obtain a list of all checks for a Sensu cluster
+instance via the following Curl request (assuming your Sensu API instance is listening on the default
+port of 4567):
+
+{% highlight bash %}
+$ curl -s https://<SENSU_HOSTNAME_OR_IP>:4567/results | jq .
+{% endhighlight %}
+
+The JSON data returned is an array of objects, each object being a check result. Finding the length of
+the array will give you the total number of checks for the Sensu cluster:
+
+{% highlight bash %}
+$ curl -s https://<SENSU_HOSTNAME_OR_IP>:4567/results | jq '. | length'
+{% endhighlight %}
+
 ### Credit
 
 Many of the best practices above were gleaned from the following:
@@ -24,3 +45,4 @@ Many of the best practices above were gleaned from the following:
 * [RabbitMQ Production Checklist](https://www.rabbitmq.com/production-checklist.html)
 * [Sensu-Recommended RabbitMQ Config](https://sensuapp.org/docs/0.24/reference/rabbitmq.html)
 * [Sensu Scaling](https://sensuapp.org/docs/0.24/reference/server.html#scaling-sensu)
+* [Sensu Results API](https://sensuapp.org/docs/0.24/api/results-api.html)
