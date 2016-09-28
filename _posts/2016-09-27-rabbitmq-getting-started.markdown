@@ -183,7 +183,8 @@ The following command will enable HA for the queue named `<QUEUE_NAME>` in the c
 virtual host created in earlier steps:
 
 {% highlight bash %}
-$ sudo rabbitmqctl set_policy ha-testing "^(<QUEUE_NAME>$)" '{"ha-mode":"all", "ha-sync-mode":"automatic"}' -p /testing
+$ sudo rabbitmqctl set_policy ha-testing "^(<QUEUE_NAME>$)" \
+                   '{"ha-mode":"all", "ha-sync-mode":"automatic"}' -p /testing
 {% endhighlight %}
 
 ### Monitoring/Metrics
@@ -233,7 +234,7 @@ $ sudo rabbitmq-server restart
 Once the above has been performed, you can access the management web interface via the following URL and
 log in via the guest account (`guest:guest`):
 
-* http://<INSTANCE_HOSTNAME>:15672
+* http://\<INSTANCE_HOSTNAME\>:15672
 
 From the interface, you can add the ability for users to log in/use the management interface under the
 "Admin" tab, and creating/selecting a user. To grant access to the interface, add a tag "management" to
@@ -249,7 +250,8 @@ case of testing, you can run the following command on the node which is currentl
 database:
 
 {% highlight bash %}
-$ sudo rabbitmqctl eval 'supervisor2:terminate_child(rabbit_mgmt_sup_sup, rabbit_mgmt_sup), rabbit_mgmt_sup_sup:start_child().'
+$ sudo rabbitmqctl eval 'supervisor2:terminate_child(rabbit_mgmt_sup_sup, rabbit_mgmt_sup), \
+                         rabbit_mgmt_sup_sup:start_child().'
 {% endhighlight %}
 
 ### Testing
