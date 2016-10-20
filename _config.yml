@@ -8,7 +8,7 @@ github_username: jekhokie
 # build settings
 markdown: kramdown
 
-paginate: 5
+paginate: 10
 
 # pagination settinsg
 gems:
