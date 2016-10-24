@@ -23,16 +23,16 @@ $ sudo apt-get install -y python-pip \
                           libapache2-mod-wsgi \
                           memcached \
                           libffi-dev \
-                          python-cffi \
                           libfontconfig1-dev \
                           libfreetype6-dev
-$ sudo -E pip install "cffi>=1.7.0"
-$ sudo -E pip install "django==1.6"
-$ sudo -E pip install "django-tagging<0.4"
-$ sudo -E pip install pytz enum34
-$ sudo -E pip install fontconfig
-$ sudo -E pip install python-memcached
-$ sudo -E pip install cairocffi
+$ sudo -E pip install "cffi>=1.8.3" \
+                      "django==1.6" \
+                      "django-tagging<0.4" \
+                      pytz \
+                      enum34 \
+                      fontconfig \
+                      python-memcached \
+                      cairocffi
 {% endhighlight %}
 
 ### Process
