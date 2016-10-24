@@ -100,7 +100,7 @@ you add a third `start` command and specify `--instance=c` to start the third Ca
 To install the Carbon C Relay, use the native package management system:
 
 {% highlight bash %}
-$ sudo apt-get install carbon-c-cache
+$ sudo apt-get install carbon-c-relay
 {% endhighlight %}
 
 Once the relay binary is installed, create a configuration file somewhere on the system to be used by the
