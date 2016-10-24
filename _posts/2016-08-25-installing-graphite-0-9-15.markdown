@@ -28,6 +28,7 @@ $ sudo apt-get install -y python-pip \
 $ sudo -E pip install "cffi>=1.8.3" \
                       "django==1.6" \
                       "django-tagging<0.4" \
+                      service_identity \
                       pytz \
                       enum34 \
                       fontconfig \
@@ -162,6 +163,39 @@ Restart (or start) Apache for enabling graphite-web:
 
 {% highlight bash %}
 $ sudo -E service apache2 restart
+{% endhighlight %}
+
+#### Optional - Service Script
+
+It is entirely possible to use the Graphite setup above via the bin/ directory scripts. However, it is
+likely a better idea to have a service/init script - there is an example script inside the examples/
+directory of the Graphite folder that can be used as a starting point:
+
+{% highlight bash %}
+$ sudo cp /opt/graphite/examples/init.d/carbon-cache /etc/init.d/
+$ sudo chmod 755 /etc/init.d/carbon-cache
+$ sudo vim /etc/init.d/carbon-cache
+# You will likely need to replace any occurrence of "echo_success" or "echo_failure" with
+# "echo 'success'" and "echo 'failure'", respectively, or write a custom function of your choosing.
+# In addition, if you wish to define/use multiple cache instances, in the "start", "stop" and "status" functions,
+# there is a for loop that iterates over each "INSTANCES" instance - one of the first conditions checks if
+# "${INSTANCE}" == "${CARBON_DAEMON}" and, if true, sets "INSTANCE="a"" - change the content of this entire "IF"
+# condition in each start/stop/status function to simply read "continue" - this will ensure that the "[cache]"
+# section of the carbon.conf (default globals when defining multiple cache instances) is not considered cache
+# instance "a", causing confusing errors during the service management.
+{% endhighlight %}
+
+Once you have completed the above, the Graphite/Carbon-Cache instances can be managed via the following command(s):
+
+{% highlight bash %}
+# start the Carbon Cache instance(s)
+$ sudo service carbon-cache start
+
+# check the status of the Carbon Cache instance(s)
+$ sudo service carbon-cache status
+
+# stop the Carbon Cache instance(s)
+$ sudo service carbon-cache stop
 {% endhighlight %}
 
 #### Validation
