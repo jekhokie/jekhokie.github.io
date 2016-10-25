@@ -1,0 +1,242 @@
+---
+layout: post
+title:  "South Africa 2016"
+date:   2016-10-20 08:14:08 -0400
+categories: south-africa vacation family
+---
+In October of 2016 I was fortunate enough to take a trip down to South Africa for my brother's
+wedding. Most of our family went down for the wedding and made a 2 week vacation out of the
+trip. In this post, I share some of the amazing places we visited and animals we encountered.
+
+**Trip Dates**: *October 3, 2016 - October 14, 2016*
+
+**Note**: The images below are in a 'carousel' format, so you can click on the left/right of the
+image to scroll through the collection of images for the location, and click in the center of an
+image to view a slightly enlarged version of the image.
+
+### Ernie Els Winery ***<small>([Link](http://www.ernieelswines.com/))</small>***
+
+Vineyard with spectacular views, a cellar full of very expensive wines and a chipping green - get
+a hole in one and you get a free bottle of wine. The basement has some very VERY expensive wines
+(we were told that one of the bottles of wine is so old and expensive that it is literally worth
+more than the entire wine estate). Not too shabby for a bottle of vinegar!
+
+While at this vineyard, we learned a couple of things. The wine barrels are "painted" red in the
+middle, which is done using the skins of grapes to help with conditioning the wood for expansion.
+In addition, the wine-maker will often pour wood chips or raw eggs into the barrels to adjust the
+chemical balance of the wine.
+
+{% assign carousel = "[![Ernie Els 1][1]][1],
+                      [![Ernie Els 2][2]][2],
+                      [![Ernie Els 3][3]][3],
+                      [![Ernie Els 4][4]][4]" | split: "," %}
+{% include image-carousel.html id="ernie-els" %}
+
+### Uva Mira Winery ***<small>([Link](http://uvamira.com/))</small>***
+
+Smaller vineyard with spectacular views atop the hill where several vineyards reside, including
+the previously-mentioned Ernie Els vineyard. There is a home sitting higher on the mountain
+overlooking the actual winery guest building which is said to belong to the owners of the estate.
+The owners were looking to convert the home into a tasting/guest house but could not as a rare
+South African white leopard was spotted on the property and, as such, the property was being
+conserved for potential breeding of the rare species.
+
+{% assign carousel = "[![Uva Mira 1][5]][5],
+                      [![Uva Mira 2][6]][6]" | split: "," %}
+{% include image-carousel.html id="uva-mira" %}
+
+### Boulders (Penguin) Beach ***<small>([Link](http://www.southafrica.net/za/en/articles/entry/article-southafrica.net-boulders-beach-penguins))</small>***
+
+As if humans were replaced by penguins, this beach was filled with them. You can walk onto the
+beach itself (difficult to navigate at high tide as you have to crawl through small spaces between
+the boulders) or take a stroll down the wooden boardwalk that circles the beach, which allows
+you to see many penguins both in the woods as well as on the beach at the end of the boardwalk.
+
+{% assign carousel = "[![Penguin Beach 1][7]][7],
+                      [![Penguin Beach 2][8]][8],
+                      [![Penguin Beach 3][9]][9]" | split: "," %}
+{% include image-carousel.html id="penguin-beach" %}
+
+### Cape Point ***<small>([Link](http://capepoint.co.za/))</small>***
+
+One of the more spectacular views I've ever seen, the southern-most point of South Africa, filled
+with babboons roaming around and walking by. You can either take a small tram to get to the top,
+or hike up a path cut for visitors to make their way to the top. The views from all sides of the
+mountain-top are spectacular, but the real treasure is at the end of the point where an old (but
+still working) lighthouse can be seen.
+
+{% assign carousel = "[![Cape Point 1][10]][10],
+                      [![Cape Point 2][11]][11],
+                      [![Cape Point 3][12]][12],
+                      [![Cape Point 4][13]][13],
+                      [![Cape Point 5][14]][14],
+                      [![Cape Point 6][15]][15],
+                      [![Cape Point 7][16]][16]" | split: "," %}
+{% include image-carousel.html id="cape-point" %}
+
+### Cape Point Ostrich Farm ***<small>([Link](http://capepointostrichfarm.com/))</small>***
+
+Just across the street (a block or two up from the entrance of Cape Point park) is an ostrich farm
+that looks like you are arriving in an old town in the middle of some old European estate. If
+you're lucky enough, you can feed them (although one of them ended up being quite aggressive). The
+shop sells all kinds of high-end (but VERY expensive) ostrich leather goods, including purses,
+wallets, key chains, etc.
+
+{% assign carousel = "[![Ostrich Farm 1][17]][17],
+                      [![Ostrich Farm 2][18]][18],
+                      [![Ostrich Farm 3][19]][19],
+                      [![Ostrich Farm 4][20]][20]" | split: "," %}
+{% include image-carousel.html id="ostrich-farm" %}
+
+### Mooiberg Farmstall (Strawberry Farm/Wine) ***<small>([Link](http://www.roomsforafrica.com/attraction.do?id=213))</small>***
+
+A mix of fun statues for kids and a general mart with fresh fruits, vegetables, and biltong, this shop
+has an unassuming basement filled with expensive wines (you just have to know who to ask to browse it).
+Outside, there are structures/statues of various animals and people (fun for kids).
+
+{% assign carousel = "[![Strawberry Farm 1][21]][21],
+                      [![Strawberry Farm 2][22]][22]" | split: "," %}
+{% include image-carousel.html id="strawberry-farm" %}
+
+### Annandale Wines ***<small>([Link](http://www.annandale.co.za/framework/index.asp))</small>***
+
+Dusty and old describe this winery that is a stark contrast to the other very upscale and modern
+wineries surrounding it. It is a look into old-word as the building is over 200 years old (and
+is the first estate in Stellenbosch established by the original founder of the town). While
+there, the owners were restoring the building, exposing natural wood beams that had been painted
+over by prior owners.
+
+{% assign carousel = "[![Annandale 1][23]][23],
+                      [![Annandale 2][24]][24],
+                      [![Annandale 3][25]][25],
+                      [![Annandale 4][26]][26]" | split: "," %}
+{% include image-carousel.html id="annandale" %}
+
+### Delaire Graff Estate ***<small>([Link](http://www.delaire.co.za/))</small>***
+
+By far the most modern, expensive-looking, and overall impressive wine estate (second to Waterkloof,
+of course). The estate featured a VERY high-end Graff diamond shop that we were invited in to
+explore all variations of jewelry that we would likely never be able to afford in our lifetime. Wine
+tasting at this venue is nicely paired with a cheese and olive platter, and the most interesting of
+small tablets that expand into a refreshing towel when dropped into a small bit of water.
+
+{% assign carousel = "[![Delaire Graff 1][27]][27],
+                      [![Delaire Graff 2][28]][28],
+                      [![Delaire Graff 3][29]][29],
+                      [![Delaire Graff 4][30]][30]" | split: "," %}
+{% include image-carousel.html id="delaire" %}
+
+### Table Mountain ***<small>([Link](http://www.tablemountain.net/))</small>***
+
+A new 7-wonders of the world, you take a rotating gondola up an extremely steep cable to reach the
+top. Once there, you could spend hours hiking around and photographing the many different views
+from the top, and can see sights such as [Robben Island](http://www.robben-island.org.za/) where
+Nelson Mandela was imprisoned.
+
+{% assign carousel = "[![Table Mountain 1][31]][31],
+                      [![Table Mountain 2][32]][32],
+                      [![Table Mountain 3][33]][33],
+                      [![Table Mountain 4][34]][34],
+                      [![Table Mountain 5][35]][35],
+                      [![Table Mountain 6][36]][36]" | split: "," %}
+{% include image-carousel.html id="table-mountain" %}
+
+### Van Ryn's Brandy ***<small>([Link](http://www.vanryns.co.za/home.php))</small>***
+
+A swanky estate with great brandy tasting, the tasting room is any man's dream for a man
+cave/swanky lounge. Pair your brandy with chocolate (as we did) for a great tasting experience.
+Copper equipment, presumably for distilling, is on display, as are some of the more expensive
+'reserve' brandy options that were developed by the distillery.
+
+{% assign carousel = "[![Van Ryn 1][37]][37],
+                      [![Van Ryn 2][38]][38],
+                      [![Van Ryn 3][39]][39],
+                      [![Van Ryn 4][40]][40],
+                      [![Van Ryn 5][41]][41],
+                      [![Van Ryn 6][42]][42]" | split: "," %}
+{% include image-carousel.html id="van-ryn" %}
+
+### St. James Beach ***<small>([Link](https://en.wikipedia.org/wiki/St_James,_Cape_Town))</small>***
+
+Known for its colorful Victorian bathing boxes, this beach at low tide sports some amazing abelone
+shells. The town itself is filled with various 'antique' shops that, ironically, contain a lot of
+American 'antiques'. Going at low tide is definitely better as the sandy beach is more exposed and
+walkable.
+
+{% assign carousel = "[![St James 1][43]][43],
+                      [![St James 2][44]][44],
+                      [![St James 3][45]][45]" | split: "," %}
+{% include image-carousel.html id="st-james" %}
+
+### Remembering the Events
+
+A lot was experienced over the course of the trip - these are just some quick one-liners that help
+with remembering the events. A few of these are inside jokes from the trip and may not make sense
+to everyone:
+
+* Not being able to fly out on time (2 day loss) because of no birth certificate, and 15 hours of driving
+thereafter to rectify the error.
+* Babboons taking Maxwell's toys - and then discovering the toy graveyard where they stored what must have
+been hundreds of other childrens' toys that they stole.
+* Left-side of road driving in right-side (passenger) seats.
+* MILES of shanty town (Khayelitsha).
+* Wine (some of the best).
+* 2-lane roads turning into 4-lane highways (cars moving into breakdown lanes to allow others to pass).
+* Squirrels (and pasta).
+* Brandy and cigars.
+* Babboons eating tubes of toothpaste.
+* Street-side raw fish stands.
+* Lack of bathroom doors.
+* Gates/security/alarms.
+* Parking/car "guards" (expecting you to tip them).
+* The Hubbly Bubbly (hookah) master.
+* Cufflinks and haircuts.
+* Lapa and braai of many (MANY) different meats.
+* Amazing sights and sounds from Waterkloof (wedding venue).
+* Biltong (and more biltong).
+
+[1]: /assets/images/2016-10-20-south-africa-2016-ernie-els-1.jpg
+[2]: /assets/images/2016-10-20-south-africa-2016-ernie-els-2.jpg
+[3]: /assets/images/2016-10-20-south-africa-2016-ernie-els-3.jpg
+[4]: /assets/images/2016-10-20-south-africa-2016-ernie-els-4.jpg
+[5]: /assets/images/2016-10-20-south-africa-2016-uva-mira-1.jpg
+[6]: /assets/images/2016-10-20-south-africa-2016-uva-mira-2.jpg
+[7]: /assets/images/2016-10-20-south-africa-2016-penguin-beach-1.jpg
+[8]: /assets/images/2016-10-20-south-africa-2016-penguin-beach-2.jpg
+[9]: /assets/images/2016-10-20-south-africa-2016-penguin-beach-3.jpg
+[10]: /assets/images/2016-10-20-south-africa-2016-cape-point-1.jpg
+[11]: /assets/images/2016-10-20-south-africa-2016-cape-point-2.jpg
+[12]: /assets/images/2016-10-20-south-africa-2016-cape-point-3.jpg
+[13]: /assets/images/2016-10-20-south-africa-2016-cape-point-4.jpg
+[14]: /assets/images/2016-10-20-south-africa-2016-cape-point-5.jpg
+[15]: /assets/images/2016-10-20-south-africa-2016-cape-point-6.jpg
+[16]: /assets/images/2016-10-20-south-africa-2016-cape-point-7.jpg
+[17]: /assets/images/2016-10-20-south-africa-2016-ostrich-farm-1.jpg
+[18]: /assets/images/2016-10-20-south-africa-2016-ostrich-farm-2.jpg
+[19]: /assets/images/2016-10-20-south-africa-2016-ostrich-farm-3.jpg
+[20]: /assets/images/2016-10-20-south-africa-2016-ostrich-farm-4.jpg
+[21]: /assets/images/2016-10-20-south-africa-2016-strawberry-farm-1.jpg
+[22]: /assets/images/2016-10-20-south-africa-2016-strawberry-farm-2.jpg
+[23]: /assets/images/2016-10-20-south-africa-2016-annandale-1.jpg
+[24]: /assets/images/2016-10-20-south-africa-2016-annandale-2.jpg
+[25]: /assets/images/2016-10-20-south-africa-2016-annandale-3.jpg
+[26]: /assets/images/2016-10-20-south-africa-2016-annandale-4.jpg
+[27]: /assets/images/2016-10-20-south-africa-2016-delaire-1.jpg
+[28]: /assets/images/2016-10-20-south-africa-2016-delaire-2.jpg
+[29]: /assets/images/2016-10-20-south-africa-2016-delaire-3.jpg
+[30]: /assets/images/2016-10-20-south-africa-2016-delaire-4.jpg
+[31]: /assets/images/2016-10-20-south-africa-2016-table-mountain-1.jpg
+[32]: /assets/images/2016-10-20-south-africa-2016-table-mountain-2.jpg
+[33]: /assets/images/2016-10-20-south-africa-2016-table-mountain-3.jpg
+[34]: /assets/images/2016-10-20-south-africa-2016-table-mountain-4.jpg
+[35]: /assets/images/2016-10-20-south-africa-2016-table-mountain-5.jpg
+[36]: /assets/images/2016-10-20-south-africa-2016-table-mountain-6.jpg
+[37]: /assets/images/2016-10-20-south-africa-2016-van-ryn-1.jpg
+[38]: /assets/images/2016-10-20-south-africa-2016-van-ryn-2.jpg
+[39]: /assets/images/2016-10-20-south-africa-2016-van-ryn-3.jpg
+[40]: /assets/images/2016-10-20-south-africa-2016-van-ryn-4.jpg
+[41]: /assets/images/2016-10-20-south-africa-2016-van-ryn-5.jpg
+[42]: /assets/images/2016-10-20-south-africa-2016-van-ryn-6.jpg
+[43]: /assets/images/2016-10-20-south-africa-2016-st-james-1.jpg
+[44]: /assets/images/2016-10-20-south-africa-2016-st-james-2.jpg
+[45]: /assets/images/2016-10-20-south-africa-2016-st-james-3.jpg

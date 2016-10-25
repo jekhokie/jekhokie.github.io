@@ -10,6 +10,10 @@ markdown: kramdown
 
 paginate: 10
 
+collections:
+    personalstream:
+        output: true
+
 # pagination settinsg
 gems:
   - jekyll-paginate
