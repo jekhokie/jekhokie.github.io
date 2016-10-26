@@ -1,5 +1,15 @@
 .carousel {
+    border: 1px solid #eee;
     margin-bottom: 32px;
+}
+
+.carousel .carousel-inner .item {
+    margin: 0px auto;
+    text-align: center;
+}
+
+.carousel .carousel-inner .item img {
+    max-height: 520px;
 }
 
 .carousel-control.left, .carousel-control.right {
