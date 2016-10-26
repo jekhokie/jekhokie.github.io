@@ -221,7 +221,7 @@ log into the web interface from a remote machine:
 $ sudo vim /etc/rabbitmq/rabbitmq.config
 # add the following:
 #   [
-#     [{rabbit, [
+#     {rabbit, [
 #       ...
 #       {loopback_users, []}
 #       ...
