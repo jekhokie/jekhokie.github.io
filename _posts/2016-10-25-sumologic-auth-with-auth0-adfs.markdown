@@ -118,9 +118,9 @@ with the account specified!
 It is unlikely that users will appreciate having to remember and type in the **Authn Request URL**
 into their browser each and every time they wish to access the application. To foster greater
 adoption and help users, it is likely a better idea to create a very simple DNS record that
-resolves to the **Authn Request URL** so that users can easily remember the endpoint. Feel free to
-create something simple, such as "sumologic.my.domain" to ensure users can easily remember how
-to access and utilize the SumoLogic service.
+resolves to an endpoint/handler which redirects to the **Authn Request URL** so that users can
+easily remember the endpoint. Consider creating something simple, such as "sumologic.my.domain"
+to ensure users can easily remember how to access and utilize the SumoLogic service.
 
 ### Optional - Auth Account Provisioning
 
