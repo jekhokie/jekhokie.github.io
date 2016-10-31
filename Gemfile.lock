@@ -133,9 +133,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages (= 96)
+  github-pages
   jekyll-paginate
-  json
   minima
 
 BUNDLED WITH
