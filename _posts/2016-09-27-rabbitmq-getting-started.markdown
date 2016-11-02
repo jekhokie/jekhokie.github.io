@@ -130,7 +130,7 @@ the RabbitMQ service for configuration directive to take effect):
 
 {% highlight bash %}
 #   ...
-#   {cluster_nodes, ['<INSTANCE_1_HOSTNAME>', '<INSTANCE_2_HOSTNAME>', ...]},
+#   {cluster_nodes, {['<INSTANCE_1_HOSTNAME>', '<INSTANCE_2_HOSTNAME>', ...], disc}},
 #   ...
 {% endhighlight %}
 
