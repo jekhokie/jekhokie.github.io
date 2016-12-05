@@ -49,11 +49,11 @@ some other art-based craftsman glow as he/she presents their products? These cra
 in their works of art, and you should be no different in your Software Engineering career.
 
 As Software Engineers, our craft is design and code. Learning best practices for how to do something
-is a fantasic way to not only feel good about what you're designing, but move in the direction of
+is a fantastic way to not only feel good about what you're designing, but move in the direction of
 perfection as well. If you are writing code, comment it. Format the code per the style guide of the
 language you are coding in. Make sure you don't mix whitespace and tabs. Don't mix camel-case and
 underscore-based variables. Keep your GitHub account well-documented and clean. These sound like
-extremely nit-pickey things, but honestly some of the best engineers I've encountered are those that
+extremely nit-picky things, but honestly some of the best engineers I've encountered are those that
 take the time to go back and refactor their code for visual perfection as much as functional
 perfection - doing so demonstrates both an attention to detail that is unchallenged as well as pride
 in the work you are doing. Writing code is an art (or can be), and your code is a direct reflection
@@ -86,7 +86,7 @@ Aside from issues, performance benchmarking is extremely vital to managing busin
 Open source software is rampant in the industry today (rightfully so) and there are some VERY
 ill-documented performance characteristics of software suites used for large scale applications.
 If you choose to use these types of applications/software (or even if you are designing your own
-software systems), and you are concerned with performence, make sure you understand how the
+software systems), and you are concerned with performance, make sure you understand how the
 software works and how to benchmark it to achieve the performance and scale metrics you are looking
 for. Environmental conditions play a huge part in how the system operates in your current ecosystem,
 and taking documentation about the project at face value will almost always result in catastrophic
@@ -216,7 +216,7 @@ help guide them to the minimum acceptable tasks that are required to get a funct
 and running/in front of the customer. Is it critical to have live streaming content in order to
 demonstrate the look and feel of the site? Is authentication/authorization required if the first
 time you demonstrate it is based on a complete internal review? There are always tradeoffs, and
-getting the smallest amount of functionality in front of the requestor as fast as possible is key
+getting the smallest amount of functionality in front of the requester as fast as possible is key
 to ensuring efficiency and minimal loss when the customer flip-flops on their request once they
 see the product.
 
@@ -252,14 +252,14 @@ However, your services cannot yet reach said market segment. The business then a
 working on the feature in order to capture the market segment.
 
 Think through this scenario - there are many facets to this that are explained both previously as well as
-down further in this post. Minimum viable product, versatility, managing expectations amonst others are
+down further in this post. Minimum viable product, versatility, managing expectations amongst others are
 extremely important in how successful you are with capturing the market segment. One intangible cost in this
 particular scenario is "cost of delay" - that is to say, how many future dollars are lost based on lack of
 capturing estimated market today. More simply - the longer you take, the less (potential) money you will have
 made.
 
 Now, how does this relate to the subject of "Cloud". There are two facets to the cost of delay (there are,
-in fact, many others, but I will focuse on two). The first is the delay due to the overall prioritization of
+in fact, many others, but I will focus on two). The first is the delay due to the overall prioritization of
 work, software design, delivery patterns, etc. Secondly, costs associated with infrastructure provisioning
 is a real issue in some companies. In most businesses, there is a technology team responsible for managing
 the infrastructure of the business. In some companies, this is a larger "Technology Operations" team, while
@@ -339,7 +339,7 @@ around it". The latter of these is a gold mine from a business perspective becau
 business money as well as reduces the risk (i.e. engineer developing customer product X leaves the company
 and the company has no idea how to support the product/needs to deprecate it or hire specific talent).
 
-Along with mimicing patterns in technology, identify behavior in the workplace and community that appears
+Along with mimicking patterns in technology, identify behavior in the workplace and community that appears
 successful (achieves the intent/objectives). As you grow, it becomes more important to understand how to
 interact with people and technology in a way that differentiates yourself from your past experiences
 as more "junior" than your current position. The best way to accomplish this, aside from trying different
@@ -405,7 +405,7 @@ to any area of an Engineer's job. Automation can be thought of from two perspect
 
 * **Business perspective**: Businesses wish to make themselves and their shareholders money. The business
 perspective can be a bit sharp-edged in that automation implies software-solutions instead of
-people-solutions. However, this perspective, I believe, is often times mis-communicated by both
+people-solutions. However, this perspective, I believe, is often times miscommunicated by both
 senior and mid-level managers. The desire to automate does not imply a direct "we wish to fire our
 staff". Instead, a business that thrives hires and maintains talent - this means that automation
 instead frees bandwidth for those talented engineers to focus on other, more interesting ideas to
@@ -525,7 +525,7 @@ benefit in the same way you had and likely still are.
 All of the above was a long-winded way for me to explain "be a good Engineer". I have found
 repeatedly that effort is the key to progress. Sometimes, filling a gap/demonstrating initiative
 is the way to make real progress, while other times its doing the hard work to dig in and gather
-metrics that counts the most. Tailor your engagement based on what you belive the appropriate
+metrics that counts the most. Tailor your engagement based on what you believe the appropriate
 level of effort and approach are (follow your "gut instinct", as you start to develop it, and
 "fail fast" in cases where you were wrong). Give your leadership no reason to ask "why do you
 think that" by providing proof/details, and give them the comfort of providing you the autonomy
