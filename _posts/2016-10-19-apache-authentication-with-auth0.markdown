@@ -157,7 +157,8 @@ utilized for the Ubuntu operating system on which the Apache proxy is installed:
 
 {% highlight bash %}
 $ wget http://ftp.us.debian.org/debian/pool/main/liba/libapache2-mod-auth-openidc/libapache2-mod-auth-openidc_1.6.0-1_amd64.deb
-$ sudo apt-get install libjansson4
+$ sudo apt-get install libjansson4 \
+                       libcurl3
 $ sudo dpkg -i libapache2-mod-auth-openidc_1.6.0-1_amd64.deb
 {% endhighlight %}
 
