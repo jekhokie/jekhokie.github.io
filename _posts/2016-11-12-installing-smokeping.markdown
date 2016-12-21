@@ -23,7 +23,7 @@ of the "productization" of the service will not be included.
 ### Underlying Compute Technology/Ecosystem
 
 This tutorial utilizes/makes the following assumptions about your compute infrastructure. Although the
-instructions can be extended to accomodate cloud-based and/or other infrastructure environments quite
+instructions can be extended to accommodate cloud-based and/or other infrastructure environments quite
 easily, all details are explained with respect to local development for the purposes of simplicity:
 
 - **Hypervisor Technology**: VirtualBox
