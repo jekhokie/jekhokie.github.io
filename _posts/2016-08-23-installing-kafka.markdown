@@ -61,10 +61,21 @@ Kafka is the main event processing application.
 
 ##### Configuration/Setup
 
-The configuration file for Kafka is in config/server.properties. There are quite a few tunable parameters in
+The configuration file for Kafka is in `config/server.properties`. There are quite a few tunable parameters in
 this file, but one of note is `zookeeper.connect` which tells Kafka where its ZooKeeper instance is
 located (defaults to 'localhost:2181', which is fine for this exercise). By default, the single Kafka broker
-listens on port 9092.
+listens on port 9092. If you wish to access Kafka from outside the virtual machine on which it is being
+installed, it is best to also configure the `listeners` parameter to explicitly bind the service to the
+interface that contains an IP address that is reachable by outside sources. In summary, the following
+configurations are acceptable in the `config/server.properties`, where `<IP_ADDRESS>` is an IP address of the
+host virtual machine that is reachable from outside the machine itself:
+
+{% highlight bash %}
+$ sudo vim config/server.properties
+# ensure at least the following are set:
+#   listeners=PLAINTEXT://<IP_ADDRESS>:9092
+#   zookeeper.connect=localhost:2181
+{% endhighlight %}
 
 Kafka can be a memory hog (part of the benefits it provides related to speed). If developing on a local
 VM it is likely a good idea to memory constrain the Kafka process, which is the KAFKA_HEAP_OPTS parameter

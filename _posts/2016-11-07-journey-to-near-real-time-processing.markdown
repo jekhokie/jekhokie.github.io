@@ -313,6 +313,7 @@ $ vim config/server.properties
 # ensure the following properties are set in the configuration - feel free to leave
 # the rest of the 'out of box' configurations alone for now:
 #   broker.id=1
+#   listeners=PLAINTEXT://10.11.13.15:9092
 #   log.dirs=/var/log/kafka
 #   zookeeper.connect=10.11.13.15:2181,10.11.13.16:2181
 
@@ -321,6 +322,7 @@ $ vim config/server.properties
 # ensure the following properties are set in the configuration - feel free to leave
 # the rest of the 'out of box' configurations alone for now:
 #   broker.id=2
+#   listeners=PLAINTEXT://10.11.13.16:9092
 #   log.dirs=/var/log/kafka
 #   zookeeper.connect=10.11.13.15:2181,10.11.13.16:2181
 {% endhighlight %}
@@ -340,7 +342,7 @@ crash on start:
 
 {% highlight bash %}
 # Node: node1.localhost, node2.localhost
-$ ps ef | grep zookeeper
+$ ps ef | grep kafka
 # should output a process and corresponding process ID - output truncated for brevity:
 #   17216 pts/0    R+     0:00  \_ grep --color=auto zookeeper XDG_SESSION_ID=3 SSH...
 {% endhighlight %}
@@ -663,6 +665,7 @@ $ vim build.sbt
 #
 #   // override any 'deduplicate' strategy with a 'pick last to avoid errors'
 #   assemblyMergeStrategy in assembly := {
+#       case PathList("META-INF", "MANIFEST.MF") => MergeStrategy.discard
 #       case x => MergeStrategy.last
 #   }
 {% endhighlight %}
@@ -749,7 +752,7 @@ $ sbt assembly
 #   ...
 #   [warn] Strategy 'discard' was applied to 69 files
 #   [warn] Strategy 'first' was applied to 3761 files
-#   [info] Assembly up to date: /home/vagrant/TestApp/target/scala-2.11/test-app-assembly-0.0.1.jar
+#   [info] Assembly up to date: /home/vagrant/TestApp/target/scala-2.11/TestApp-assembly-0.0.1.jar
 #   [success] Total time: 4 s, completed Nov 5, 2016 9:15:33 PM
 {% endhighlight %}
 
@@ -763,7 +766,7 @@ that you are running the command from node1.localhost (note the IP address liste
 $ SPARK_LOCAL_IP=10.11.13.15 ../spark-2.0.1-bin-hadoop2.7/bin/spark-submit \
                              --driver-memory 512m \
                              --master local[2] \
-                             /home/vagrant/TestApp/target/scala-2.11/test-app-assembly-0.0.1.jar \
+                             /home/vagrant/TestApp/target/scala-2.11/TestApp-assembly-0.0.1.jar \
                              10.11.13.15:9092,10.11.13.16:9092 test 5
 {% endhighlight %}
 
