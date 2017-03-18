@@ -17,3 +17,4 @@ collections:
 # pagination settinsg
 gems:
   - jekyll-paginate
+  - jekyll-seo-tag
