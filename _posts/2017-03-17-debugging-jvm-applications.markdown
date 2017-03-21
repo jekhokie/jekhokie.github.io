@@ -46,7 +46,7 @@ $ sudo tail -f /var/log/jenkins/jenkins.log
 $ sudo less /var/log/jenkins/jenkins.log
 
 # inspect OS-level system logs for abnormalities
-$ sudo less /var/log/jenkins/jenkins.log
+$ sudo less /var/log/syslog
 {% endhighlight %}
 
 #### System Metrics
