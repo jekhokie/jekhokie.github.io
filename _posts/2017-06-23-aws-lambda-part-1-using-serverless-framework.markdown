@@ -2,7 +2,7 @@
 layout: post
 title:  "AWS Lambda - Part 1: Using Serverless Framework"
 date:   2017-06-23 19:04:21 -0400
-categories: nodejs aws lambda serverless nodejs
+categories: nodejs aws lambda serverless
 ---
 Tutorial to document the steps to create an [AWS Lambda](https://aws.amazon.com/lambda/) function
 using the [Serverless Framework](https://github.com/serverless/serverless) for NodeJS using the
@@ -122,7 +122,7 @@ manages the configurations for how the application is deployed in conjunction wi
 present in your environment for the AWS account you are deploying to.
 
 This tutorial utilizes static AWS credentials through the AWS IAM service. It is desirable to instead utilize
-the Secure Token Service (STS) capability to generate short-lived tokens over persistent/long-living tokens,
+the Security Token Service (STS) capability to generate short-lived tokens over persistent/long-living tokens,
 which may be discussed in future tutorials, but we will defer to persistent IAM security credentials for now.
 
 First, log into your AWS account and navigate to the IAM service and create a security credential for yourself.
