@@ -283,6 +283,11 @@ encrypting using the key file, removing the key, etc. in each pattern of develop
 variables are needed, so take a few minutes to write some helper functions to perform this automatically
 for you to make your development patterns easier.
 
+### Next Steps
+
+Take the next step and check out [this next post]({% post_url 2017-06-29-aws-lambda-part-3-writing-to-s3 %})
+that details how to store data that is sent to an AWS Lambda function to AWS S3.
+
 ### Credit
 
 The above tutorial was pieced together with some information from the following sites/resources:
