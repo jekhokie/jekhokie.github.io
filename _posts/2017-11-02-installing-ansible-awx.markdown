@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Ansible AWX"
-#date:   2017-11-02 20:24:13 -0400
+title:  "Installing Ansible AWX"
+date:   2017-11-02 20:24:13 -0400
 categories: ubuntu linux ansible devops awx
 ---
 Installation and configuration of the [Ansible AWX](https://github.com/ansible/awx) product, the open-source
