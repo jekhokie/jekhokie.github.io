@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: About Me
+permalink: /about-me/
 weight: 100
 ---
 
@@ -15,3 +15,6 @@ more formal and public, thus forcing me to refine the presentation of the data t
 This site is my way of sharing my knowledge and professional profile. It is intended to grow into a
 complete knowledge base and demonstration of my technical (and possibly other) interests and abilities
 as I continue to expand my knowledge of recent technologies and fundamental concepts.
+
+If you'd like to know more about me and my professional career, you can find details
+<a href="https://www.linkedin.com/in/justin-karimi-cissp/" target="_blank">HERE</a>.
