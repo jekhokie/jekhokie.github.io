@@ -68,7 +68,7 @@ local instance of the Flask application for inspection. Note that this is not at
 Docker or Minikube as of yet - this test is just to ensure you have the correct configuration/setup:
 
 {% highlight bash %}
-$ python run.env
+$ python run.py
 {% endhighlight %}
 
 Navigate to the following URL (replace the IP address with the IP of your own host) and you should
