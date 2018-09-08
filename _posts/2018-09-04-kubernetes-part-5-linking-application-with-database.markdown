@@ -11,13 +11,14 @@ in the form of Kubernetes secrets.
 
 ## Series
 
-This is Part 5 of the 5-part series:
+This is Part 5 of the 6-part series:
 
 - [Kubernetes Part 1: Core Concepts and Installation (Minikube)]({% post_url 2018-09-04-kubernetes-part-1-concepts-and-installation %})
 - [Kubernetes Part 2: Python Flask Application Deployment]({% post_url 2018-09-04-kubernetes-part-2-python-flask-application-deployment %})
 - [Kubernetes Part 3: MySQL Database Deployment]({% post_url 2018-09-04-kubernetes-part-3-mysql-database-deployment %})
 - [Kubernetes Part 4: Application Deployments (The Smart Way - YAML Files)]({% post_url 2018-09-04-kubernetes-part-4-application-deployments-via-yaml %})
 - **Kubernetes Part 5: Linking Application with Database (Discovery)**
+- [Kubernetes Part 6: Rolling Updates]({% post_url 2018-09-07-kubernetes-part-6-rolling-updates %})
 
 ## Service Discovery
 
@@ -245,6 +246,6 @@ each Pod is successfully getting a random word from the MySQL instance!
 
 ## Next Steps
 
-This concludes the initial/basics parts of the tutorial. There are likely to be future posts about topics such as
-Persistent Storage, Secrets, Jobs, Rolling Upgrades using Replication Controllers, etc. but those will be one-off
-posts that can build from the output of these scenarios, so stay tuned, and Happy K8s!
+We now have a full-fledged application hooked up to a database. Applications change over time, and with change
+comes deployments of the new software versions. Visit the [next post]({% post_url 2018-09-07-kubernetes-part-6-rolling-updates %})
+to see how you can do rolling updates of the application in a zero-downtime fashion.
