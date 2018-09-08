@@ -18,3 +18,9 @@ as I continue to expand my knowledge of recent technologies and fundamental conc
 
 If you'd like to know more about me and my professional career, you can find details
 <a href="https://www.linkedin.com/in/justin-karimi-cissp/" target="_blank">HERE</a>.
+
+To learn more about my leadership style and approach, these are good articles that detail how I approach
+problems and my overall approach to be one of the most versatile Engineering leaders in my career field:
+
+- [Becoming a Tech Leader]({% post_url 2016-10-29-becoming-a-tech-leader %})
+- [Technical Approach]({% post_url 2016-12-05-technical-approach %})
