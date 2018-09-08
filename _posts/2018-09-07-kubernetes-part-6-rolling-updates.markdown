@@ -9,7 +9,7 @@ about rolling updates (zero-downtime updates) of the application.
 
 ## Series
 
-This is Part 6 of the 6-part series:
+This is Part 6 of the 7-part series:
 
 - [Kubernetes Part 1: Core Concepts and Installation (Minikube)]({% post_url 2018-09-04-kubernetes-part-1-concepts-and-installation %})
 - [Kubernetes Part 2: Python Flask Application Deployment]({% post_url 2018-09-04-kubernetes-part-2-python-flask-application-deployment %})
@@ -17,6 +17,7 @@ This is Part 6 of the 6-part series:
 - [Kubernetes Part 4: Application Deployments (The Smart Way - YAML Files)]({% post_url 2018-09-04-kubernetes-part-4-application-deployments-via-yaml %})
 - [Kubernetes Part 5: Linking Application with Database (Discovery)]({% post_url 2018-09-04-kubernetes-part-5-linking-application-with-database %})
 - **Kubernetes Part 6: Rolling Updates**
+- [Kubernetes Part 7: Secrets]({% post_url 2018-09-07-kubernetes-part-7-secrets %})
 
 ## Rolling Updates
 
@@ -76,17 +77,13 @@ application) or via the `kubectl edit` command, which will allow updating the De
 handling the changes for you. Since we have YAML configuration files driving our application, we will use the
 `kubectl edit` command.
 
-First, run the `kubectl edit` command and update the respective parameters for the Docker image as well as the
-strategy for deployments to reflect a "RollingUpdate" strategy:
+First, run the `kubectl edit` command and update the respective parameters for the Docker image:
 
 {% highlight bash %}
 $ kubectl edit deployment/randomizer
 # edit the .spec.template.spec.container.image
 # value to reflect the new docker image
 #   image: randomizer:v4
-# edit the .spec.strategy.type value to
-# reflect the rolling update option
-#   type: RollingUpdate
 # then save/quit the file
 
 # list the pods and you should see updates to the
@@ -128,9 +125,10 @@ reverting the Deployment configuration file changes made as part of that update.
 
 ## Next Steps
 
-This concludes the initial/basics parts of the tutorial. There are likely to be future posts about topics such as
-Persistent Storage, Secrets, Jobs, etc. but those will be one-off posts that can build from the output of these
-scenarios, so stay tuned, and Happy K8s!
+Now that we have the core functionality built for creating and deploying applications in a rolling fashion,
+we will switch gears in our [next post]({% post_url 2018-09-07-kubernetes-part-7-secrets %}) to focus on the
+security components of storing passwords and other sensitive information in a secure manner via Kubernetes
+Secrets.
 
 ### Credit
 

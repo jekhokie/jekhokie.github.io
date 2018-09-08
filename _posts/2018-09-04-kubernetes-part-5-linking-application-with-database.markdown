@@ -11,7 +11,7 @@ in the form of Kubernetes secrets.
 
 ## Series
 
-This is Part 5 of the 6-part series:
+This is Part 5 of the 7-part series:
 
 - [Kubernetes Part 1: Core Concepts and Installation (Minikube)]({% post_url 2018-09-04-kubernetes-part-1-concepts-and-installation %})
 - [Kubernetes Part 2: Python Flask Application Deployment]({% post_url 2018-09-04-kubernetes-part-2-python-flask-application-deployment %})
@@ -19,6 +19,7 @@ This is Part 5 of the 6-part series:
 - [Kubernetes Part 4: Application Deployments (The Smart Way - YAML Files)]({% post_url 2018-09-04-kubernetes-part-4-application-deployments-via-yaml %})
 - **Kubernetes Part 5: Linking Application with Database (Discovery)**
 - [Kubernetes Part 6: Rolling Updates]({% post_url 2018-09-07-kubernetes-part-6-rolling-updates %})
+- [Kubernetes Part 7: Secrets]({% post_url 2018-09-07-kubernetes-part-7-secrets %})
 
 ## Service Discovery
 
