@@ -11,7 +11,7 @@ to create stateful application deployments.
 
 ## Series
 
-This is Part 8 of the 8-part series:
+This is Part 8 of the 9-part series:
 
 - [Kubernetes Part 1: Core Concepts and Installation (Minikube)]({% post_url 2018-09-04-kubernetes-part-1-concepts-and-installation %})
 - [Kubernetes Part 2: Python Flask Application Deployment]({% post_url 2018-09-04-kubernetes-part-2-python-flask-application-deployment %})
@@ -21,6 +21,7 @@ This is Part 8 of the 8-part series:
 - [Kubernetes Part 6: Rolling Updates]({% post_url 2018-09-07-kubernetes-part-6-rolling-updates %})
 - [Kubernetes Part 7: Secrets]({% post_url 2018-09-07-kubernetes-part-7-secrets %})
 - **Kubernetes Part 8: Persistent Volumes**
+- [Kubernetes Part 9: ConfigMaps]({% post_url 2018-09-08-kubernetes-part-9-config-maps %})
 
 ## Persistent Volumes and Claims
 
@@ -303,9 +304,9 @@ persistent storage!
 
 ## Next Steps
 
-This concludes the initial/basics parts of the tutorial. There are likely to be future posts about topics such as
-Jobs, etc. but those will be one-off posts that can build from the output of these scenarios, so stay tuned, and
-Happy K8s!
+We will move forward with a more basic task focused on configuration strategy. In this [next post]({% post_url 2018-09-08-kubernetes-part-9-config-maps %})
+the objective will be to define how to separate configuration from the application in a way that scales and is
+organized.
 
 ### Credit
 

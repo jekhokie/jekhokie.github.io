@@ -9,7 +9,7 @@ about rolling updates (zero-downtime updates) of the application.
 
 ## Series
 
-This is Part 6 of the 8-part series:
+This is Part 6 of the 9-part series:
 
 - [Kubernetes Part 1: Core Concepts and Installation (Minikube)]({% post_url 2018-09-04-kubernetes-part-1-concepts-and-installation %})
 - [Kubernetes Part 2: Python Flask Application Deployment]({% post_url 2018-09-04-kubernetes-part-2-python-flask-application-deployment %})
@@ -19,6 +19,7 @@ This is Part 6 of the 8-part series:
 - **Kubernetes Part 6: Rolling Updates**
 - [Kubernetes Part 7: Secrets]({% post_url 2018-09-07-kubernetes-part-7-secrets %})
 - [Kubernetes Part 8: Persistent Volumes]({% post_url 2018-09-08-kubernetes-part-8-persistent-volumes %})
+- [Kubernetes Part 9: ConfigMaps]({% post_url 2018-09-08-kubernetes-part-9-config-maps %})
 
 ## Rolling Updates
 
