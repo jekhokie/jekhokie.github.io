@@ -10,7 +10,7 @@ in a safer way.
 
 ## Series
 
-This is Part 7 of the 7-part series:
+This is Part 7 of the 8-part series:
 
 - [Kubernetes Part 1: Core Concepts and Installation (Minikube)]({% post_url 2018-09-04-kubernetes-part-1-concepts-and-installation %})
 - [Kubernetes Part 2: Python Flask Application Deployment]({% post_url 2018-09-04-kubernetes-part-2-python-flask-application-deployment %})
@@ -19,6 +19,7 @@ This is Part 7 of the 7-part series:
 - [Kubernetes Part 5: Linking Application with Database (Discovery)]({% post_url 2018-09-04-kubernetes-part-5-linking-application-with-database %})
 - [Kubernetes Part 6: Rolling Updates]({% post_url 2018-09-07-kubernetes-part-6-rolling-updates %})
 - **Kubernetes Part 7: Secrets**
+- [Kubernetes Part 8: Persistent Volumes]({% post_url 2018-09-08-kubernetes-part-8-persistent-volumes %})
 
 ## Secrets
 
@@ -164,9 +165,10 @@ the Kubernetes Secret!
 
 ## Next Steps
 
-This concludes the initial/basics parts of the tutorial. There are likely to be future posts about topics such as
-Persistent Storage, Jobs, etc. but those will be one-off posts that can build from the output of these
-scenarios, so stay tuned, and Happy K8s!
+We now have a way to store sensitive information - in the [next post]({% post_url 2018-09-08-kubernetes-part-8-persistent-volumes %})
+we'll explore how to create storage for persisting information so when Pods/Containers are cycled the data can
+persist. Additionally, the volumes can be used for shared state information across a horizontally-scaled
+application.
 
 ### Credit
 
