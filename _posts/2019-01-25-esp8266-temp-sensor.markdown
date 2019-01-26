@@ -82,6 +82,18 @@ into normal operating mode - simply click and release the Reset button (don't to
 again see a blue flash on the board and output in the serial terminal indicating checksum checks, etc. This is
 indicative of the firmware loading and the board moving into normal operating mode.
 
+### Programming Board
+
+After putting together a breadboard to support the programming, I decided to wire and solder a more solid/permanent
+programming board that would enable plugging in a +3.3V power source as well as plug the FTDI serial to USB
+converter board directly in. The wiring isn't pretty, but it's been a while since I've soldered.
+
+##### Front
+[![ESP8266 Programming Board - Front][4]][4]
+
+##### Back
+[![ESP8266 Programming Board - Back][5]][5]
+
 ### Blinking LED (Hello World)
 
 Next we will configure the Arduino IDE to communicate with and program the ESP8266-01. First, follow the instructions
@@ -125,11 +137,19 @@ Now that we have the basics down, we'll expand the wiring and create a small pro
 and humidity sensor and prints values to the serial console. This is the first step in the longer-term objective
 for sending the metric information to a centralized time-series database.
 
+**UPDATE**: Since the initial post, I discovered that there is a workaround for most sensor libraries not correctly
+initializing the DHT22 sensor on setup. Thanks to [this comment](https://github.com/adafruit/DHT-sensor-library/issues/94#issuecomment-425927596)
+on the GitHub repository for the Adafruit firmware, updates have been made to the circuit and corresponding
+firmware to adjust for the following, ensuring the DHT22 works every time:
+
+- Wire the DHT22 GND to GPIO0.
+- Wire the DHT22 DATA to GPIO2.
+- Update firmware to initialize the sensor by correctly sending GND to true GND for duration of time.
+
 ### Temperature Sensor Wiring
 
 First, the circuit wiring. We will use our programming circuit as a starting point for expanding the wiring for the
-sensor. Since the ESP8266 has only 2 GPIO pins and we are using GPIO0 for the mode selection, we will use GPIO2 for
-the temperature sensor:
+sensor:
 
 [![ESP8266 with DHT22][3]][3]
 
@@ -153,7 +173,8 @@ following code to your Sketch file:
 #include <DHT.h>
 
 // configuration settings
-#define DHTPIN  2
+#define DHTPIN     2  // ESP8266 pin for DH22 sensor
+#define DHTINITPIN 0  // pin used to init the DHT22 (workaround for libraries)
 #define DHTTYPE DHT22
 
 DHT dht(DHTPIN, DHTTYPE);
@@ -161,6 +182,12 @@ DHT dht(DHTPIN, DHTTYPE);
 void setup() {
   // initialization
   Serial.begin(74880);
+
+  // workaround to correctly initialize the DHT22
+  // to avoid "Could not read sensor" and "NaN" errors
+  digitalWrite(DHTINITPIN, LOW);
+  pinMode(DHTINITPIN, OUTPUT);
+  delay(1000);
   dht.begin();
 }
 
@@ -233,7 +260,8 @@ to reflect the following:
 #define TEMPNS     "sensor1.temp"     // graphite namespace for temperature metric for this sensor
 #define HUMIDNS    "sensor1.humidity" // graphite namespace for humidity metric for this sensor
 #define HEATNS     "sensor1.heat"     // graphite namespace for heat index metric for this sensor
-#define DHTPIN     0                  // ESP8266 pin for DH22 sensor
+#define DHTPIN     2                  // ESP8266 pin for DH22 sensor
+#define DHTINITPIN 0                  // pin used to init the DHT22 (workaround for libraries)
 #define DHTTYPE    DHT22              // define the DHT as a DHT22
 
 // initialize wifi and sensor
@@ -259,6 +287,11 @@ void setup() {
   Serial.print("Connected, IP address: ");
   Serial.println(WiFi.localIP());
 
+  // workaround to correctly initialize the DHT22
+  // to avoid "Could not read sensor" and "NaN" errors
+  digitalWrite(DHTINITPIN, LOW);
+  pinMode(DHTINITPIN, OUTPUT);
+  delay(1000);
   dht.begin();
 }
 
@@ -340,3 +373,5 @@ The above tutorial was pieced together with some information from the following 
 [1]: /assets/images/2019-01-25-esp8266-programming-circuit.png
 [2]: /assets/images/2019-01-25-esp8266-temp-sensor-ide-settings.png
 [3]: /assets/images/2019-01-25-esp8266-with-dht22-circuit.png
+[4]: /assets/images/2019-01-25-esp8266-programmer-board-front.png
+[5]: /assets/images/2019-01-25-esp8266-programmer-board-back.png
