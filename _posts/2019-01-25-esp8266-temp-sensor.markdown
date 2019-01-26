@@ -360,6 +360,13 @@ Pi!
 **NOTE**: Yes, the above code is terribly un-DRY - I've added notes to remind myself to revisit the code, but for now
 it's functional.
 
+## Resources
+
+Here are links to the Fritzing files used in this tutorial in case they are useful:
+
+- <a href="{{ site.url }}/assets/files/2019-01-25-esp8266-programming-fritzing.fzz" target="_blank">ESP8266 Programming Circuit</a>
+- <a href="{{ site.url }}/assets/files/2019-01-25-esp8266-with-dht22-fritzing.fzz" target="_blank">ESP8266 with DHT22 Circuit</a>
+
 ## Credit
 
 The above tutorial was pieced together with some information from the following sites/resources:
