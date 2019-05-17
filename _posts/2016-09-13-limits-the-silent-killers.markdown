@@ -16,10 +16,10 @@ Running processes natively have their available resources restricted by the unde
 system. There are two types of limits - soft and hard. The default system limits can be seen via
 running the following command:
 
-```bash
+{% highlight bash %}
 $ sudo ulimit -aH
 $ sudo ulimit -aS
-```
+{% endhighlight %}
 
 #### Soft vs. Hard Limits
 
@@ -42,18 +42,18 @@ Running the `ulimit` command lists the file limits for the current user/session.
 the limits for a running process (which may have been adjusted as part of the start script/launch
 procedure), you can inspect the process `limits` file:
 
-```bash
+{% highlight bash %}
 $ sudo cat /proc/<PID>/limits
-```
+{% endhighlight %}
 
 Inspection of limits varies by limit type - one more common inspection has to do with running out of
 file descriptors. Running the `cat` command above will produce output, one data point being `Max open
 files`. This is the total number of allowable open file descriptors. To see how many file descriptors
 a process currently has open (to inspect whether it is within range of the limit):
 
-```bash
+{% highlight bash %}
 $ sudo ls -l /proc/<PID>/fd/ | wc -l
-```
+{% endhighlight %}
 
 This will count the number of files in the `fd/` directory for the process, which is the total number
 of open file handles the process has. Compare this to the number of files limit to inspect whether
@@ -64,32 +64,32 @@ the process is within range of its limit.
 Adjusting limits for a user (or all users) can be done in several ways, each of which having their own
 long-term impact/effect. In general, to set a limit for a user, edit the following file like so:
 
-```bash
+{% highlight bash %}
 $ sudo vim /etc/security/limits.conf
 # limits are specified as <user> <limit_type> <limit_type> <limit>
 # for example, to limit the hard and soft max number of files for the abc user to 1024:
 #   abc soft nofile 1024
 #   abc hard nofile 1024
-```
+{% endhighlight %}
 
 Once the above are specified, to ensure that new sessions for the abc user respect the limits specified,
 edit the following file/specify the following:
 
-```bash
+{% highlight bash %}
 $ sudo vim /etc/pam.d/common-session
 # placing this line in the file ensures all new session will require loading the limits.conf file
 # that was configured in the step above
 #   session required pam_limits.so
-```
+{% endhighlight %}
 
 The above commands work for persisting limits moving forward. However, for already-running processes,
 these files have no effect/impact. There is, however, a tool that can be used (`prlimit`) that can
 adjust limits for running processes. To use this tool (as an example):
 
-```bash
+{% highlight bash %}
 # adjust the number of files limit for process 12345 to soft=4096,hard=8192
 $ sudo prlimit --pid 12345 --nofile=4096:8192
-```
+{% endhighlight %}
 
 ### TCP Connections (Sockets)
 
@@ -103,12 +103,12 @@ limit for the process (see above section).
 The ports allowed by a system to be utilized/consumed by processes are defined in the sysctl settings
 for the system. To inspect the available ports for use, the following command is useful:
 
-```bash
+{% highlight bash %}
 # investigate ephemeral port range that is allowed by system
 $ sudo sysctl net.ipv4.ip_local_port_range
 # this will output something like the following:
 #   net.ipv4.ip_local_port_range = 32768 61000
-```
+{% endhighlight %}
 
 The above command (with sample output) means that ports 23768 through 61000 are allowed for use by
 the system processes.
@@ -117,7 +117,7 @@ the system processes.
 
 To investigate the number of sockets used on a particular system, there are several methods available:
 
-```bash
+{% highlight bash %}
 # inspect total sockets for a system
 $ sudo netstat -a | wc -l
 $ sudo lsof -i | wc -l
@@ -128,7 +128,7 @@ $ sudo cat /proc/<PID>/net/tcp | wc -l
 $ sudo netstat --all --proc | grep <PID> | wc -l
 $ sudo lsof -i -P | grep <PID> | wc -l
 $ sudo cat /proc/2611/net/sockstat | grep sockets
-```
+{% endhighlight %}
 
 #### Troubleshooting Socket Exhaustion
 
@@ -149,10 +149,10 @@ any existing tuning of the system.
 
 To detect if there are a lot of sockets in the TIME_WAIT state, the following commands are useful:
 
-```bash
+{% highlight bash %}
 $ sudo netstat -a | grep TIME_WAIT
 $ sudo ss -a | grep TIME_WAIT
-```
+{% endhighlight %}
 
 If socket exhaustion occurs and there are a lot of sockets in the TIME_WAIT state, it may be useful to
 adjust the time a socket is allowed to exist in TIME_WAIT prior to being re-used by the system. This is
@@ -161,27 +161,27 @@ To tune the used sockets in TIME_WAIT, there are a couple useful things you can 
 
 To decrease the timeout (time to close) a TIME_WAIT socket:
 
-```bash
+{% highlight bash %}
 $ sudo echo <TIMEOUT_SEC> > /proc/sys/net/ipv4/tcp_fin_timeout
-```
+{% endhighlight %}
 
 To instruct the system to re-use sockets that are in TIME_WAIT when socket exhaustion has occurred,
 enable the `tcp_tw_reuse` parameter. This will ensure that if all available sockets NOT in the TIME_WAIT
 state are consumed, the system will start to reap the TIME_WAIT sockets/allocate them to processes that
 need them:
 
-```bash
+{% highlight bash %}
 $ sudo echo 1 > /proc/sys/net/ipv4/tcp_tw_reuse
-```
+{% endhighlight %}
 
 Following specifying the re-use parameter, if performance is still not good enough, it may be desirable
 to enable another setting which tells the system to re-allocate TIME_WAIT sockets as soon as the next socket
 is requested (instead of allocating available sockets to a process). This is a bit more heavy of an
 implementation but may still be useful:
 
-```bash
+{% highlight bash %}
 $ sudo echo 1 > /proc/sys/net/ipv4/tcp_tw_recycle
-```
+{% endhighlight %}
 
 ##### Increase Available Sockets
 
@@ -193,7 +193,7 @@ available to the system). However, it's worth noting that it is likely a NOFILE 
 limit would be hit prior to experiencing complete socket starvation due to this setting, so it is worth
 investigating the file limits and file descriptors consumed prior to exploring this setting.
 
-```bash
+{% highlight bash %}
 # adjust the available port range for the system
 $ sudo sysctl -w net.ipv4.ip_local_port_range="1025 65535"
 
@@ -201,4 +201,4 @@ $ sudo sysctl -w net.ipv4.ip_local_port_range="1025 65535"
 $ sudo vim /etc/sysctl.conf
 # add the following:
 #   net.ipv4.ip_local_port_range = 1025 65535
-```
+{% endhighlight %}
