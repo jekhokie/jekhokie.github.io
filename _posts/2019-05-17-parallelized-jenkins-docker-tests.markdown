@@ -171,11 +171,10 @@ Once the configuration has been entered, click the "Test Connection" button. If 
 version and API version listed. Don't yet hit the "Save" button - we'll next configure the base container image for the build agents.
 Click the "Docker Agent templates..." button, then click "Add Docker Template". Specify the following details:
 
-* **Labels**: docker-python
+* **Labels**: docker-python-1
 * **Enabled**: Checked
-* **Name**: Docker Python Container
 * **Docker Image**: jenkins/ssh-slave-modified
-* **Instance Capacity**: 1
+* **Instance Capacity**: 5
 * **Remote File System Root**: /home/jenkins
 * **Usage**: Only build jobs with label expressions matching this node
 * **Idle Timeout**: 10
@@ -205,7 +204,28 @@ enter the following configuration items (anything not mentioned can be left as d
   * **Interval**: 1 minute
 
 Click "Save". Once the repository is checked out and a job kicks off, you should see the pipeline start to execute indicating things are
-working the way you expect them to.
+working the way you expect them to. Below are a few images that may be useful/interesting to determine if you've successfully configured
+the jobs the way they are expected to be configured.
+
+##### **Native Jenkins View of Pipeline**
+
+---
+[![Jenkins Native Pipeline][1]][1]
+<br/>
+<br/>
+
+##### **Blue Ocean View of Pipeline - Parallel Jobs**
+
+---
+[![Blue Ocean Pipeline][2]][2]
+<br/>
+<br/>
+
+##### **Aggregated Test Results**
+
+---
+[![Aggregated Test Results][3]][3]
+<br/>
 
 ### Closing Comments
 
@@ -221,3 +241,10 @@ The above tutorial was pieced together with some information from the following 
 * [Some Useful Socat Commands](http://technostuff.blogspot.com/2008/10/some-useful-socat-commands.html)
 * [Remote API with Docker for Mac (BETA)](https://forums.docker.com/t/remote-api-with-docker-for-mac-beta/15639)
 * [Jenkins SSH slave Docker Image](https://hub.docker.com/r/jenkinsci/ssh-slave/)
+* [How to create Docker Images with a Dockerfile](https://www.howtoforge.com/tutorial/how-to-create-docker-images-with-dockerfile/)
+* [JUnit - Basic Usage](https://www.tutorialspoint.com/junit/junit_basic_usage.htm)
+* [StackOverflow - Python Unittests in Jenkins?](https://stackoverflow.com/questions/11241781/python-unittests-in-jenkins)
+
+[1]: /assets/images/2019-05-17-parallelized-jenkins-docker-tests-native-pipeline.png
+[2]: /assets/images/2019-05-17-parallelized-jenkins-docker-tests-blue-ocean-pipeline.png
+[3]: /assets/images/2019-05-17-parallelized-jenkins-docker-tests-test-results.png
