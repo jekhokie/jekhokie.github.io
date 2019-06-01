@@ -6,3 +6,6 @@ _site
 # vim swap files
 *.swp
 *.swo
+
+# mac image content
+*.DS_Store
