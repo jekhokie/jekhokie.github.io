@@ -162,10 +162,25 @@ a cloudy day with the antenna parked under trees. The satellite sending the data
 <br/>
 <br/>
 
-##### **Image Data**
+##### **Image Data - Unmodified**
 
 ---
-[![Image Data][2]][2]
+[![Image Data - Unmodified][2]][2]
+<br/>
+<br/>
+
+##### **Image Data - HVCT False Colour (NOAA)**
+
+---
+[![Image Data - HVCT False Colour][3]][3]
+<br/>
+<br/>
+
+##### **Image Data - Thermal**
+
+---
+[![Image Data - Thermal][4]][4]
+<br/>
 <br/>
 
 ### Credit
@@ -182,3 +197,5 @@ The above tutorial was pieced together with some information from the following 
 
 [1]: /assets/images/2019-05-30-noaa-satellite-imagery-sdr-software-output.png
 [2]: /assets/images/2019-05-30-noaa-satellite-imagery-sdr-image-output.png
+[3]: /assets/images/2019-05-30-noaa-satellite-imagery-sdr-image-hvct-false-colour.png
+[4]: /assets/images/2019-05-30-noaa-satellite-imagery-sdr-image-thermal.png
