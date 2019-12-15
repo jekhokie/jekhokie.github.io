@@ -409,6 +409,30 @@ device you port forwarded *from*), access the dashboard via the following URL in
 Use the `Token` option to log in, and paste the token you captured from the "Dashboard User Token" section above. You should now see the
 dashboard and all configurations/resources in your cluster!
 
+### Connecting from Local Device
+
+There is a caveat if you wish to connect to the cluster from a local device (laptop or otherwise). Due to the fact that the `eth0` interface
+is hosting the cluster IP for the node subnet, if your local device is not on the same subnet/network (`10.x`), you will likely need to SSH tunnel
+and port forward the interface for `kubectl` to operate. First, copy the `/home/pirate/.kube/config` file to your local machine `~/.kube/config` file.
+Then, port forward SSH-tunnel into the k8s master `node1` instance for the `kubectl` interface:
+
+```bash
+ssh -L6443:localhost:6443 pirate@node1
+```
+
+Finally, open a new window and run the following command to see the node status for your cluster:
+
+```bash
+kubectl get nodes --insecure-skip-tls-verify=true
+```
+
+If all goes well, you should see your cluster node status displayed!
+
+**Note**: If you don't want to have to include the `--insecure-skip-tls-verify=true` switch for each command and you aren't worried about man-in-the-middle
+attacks (or don't want to mess with certs), you can update the cluster config to remove cert checking/TLS verification entirely by using the following
+command: `kubectl config set-cluster kubernetes --insecure-skip-tls-verify=true`. Note that it is much preferred that you resolve the certificate validation
+issues than use this method, but for quick starts, this may suffice for your needs.
+
 ### Credit
 
 The above tutorial was pieced together with some information from the following sites/resources:
