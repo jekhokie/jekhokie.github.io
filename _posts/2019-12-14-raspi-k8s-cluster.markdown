@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Raspberry Pi k8s Cluster"
-date:   2019-09-14 21:17:00 -0400
+date:   2019-12-14 21:17:00 -0400
 categories: raspberry-pi k8s linux
 ---
 [Kubernetes](https://kubernetes.io/) (k8s) is a container orchestration platform that's transforming the way software services
