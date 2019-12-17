@@ -234,6 +234,37 @@ When they have finished rebooting, SSH back into the devices and ensure each has
 `10.0.0.3` IP address, respectively, while the `wlan0` (wireless) adapter remains specified as an IP on your wireless network, ensuring they
 can continue to access the public internet.
 
+### Web Access
+
+Often a reboot of the Raspberry Pi can result in a loss of default route to the internet. To prevent this (and to always ensure that the
+Raspberry Pi boots with a default route to the internet), create a file `/etc/rc.local` with the route addition according to your actual
+default gateway:
+
+```bash
+ip route add default via 192.168.86.1 dev wlan0
+```
+
+### Firewall and Traffic Forwarding
+
+On each node, data exchange between the `wlan0` and `eth0` devices is needed and is configured through IPTables routing rules and
+`sysctl` settings. Configure IP forwarding by editing `/etc/sysctl.conf`:
+
+
+```bash
+# edit this property to be un-commented and set to a value of "1"
+net.ipv4.ip_forward=1
+```
+
+Next, add the following statements to the file `/etc/rc.local` to ensure the IPTables rules are correctly specified:
+
+```bash
+iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+iptables -A FORWARD -i wlan0 -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth0 -o wlan0 -j ACCEPT
+```
+
+When done, reboot your Raspberry Pi instance for the settings to take effect.
+
 ### Kubernetes Software Installation
 
 On each of the nodes, add the encryption key for the k8s packages, add the k8s repository, and install the packages required to run
