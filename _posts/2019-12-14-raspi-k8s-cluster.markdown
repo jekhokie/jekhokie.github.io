@@ -232,26 +232,6 @@ When they have finished rebooting, SSH back into the devices and ensure each has
 `10.0.0.4` IP address, respectively, while the `wlan0` (wireless) adapter remains specified as an IP on your wireless network, ensuring they
 can continue to access the public internet.
 
-### Firewall and Traffic Forwarding
-
-On each node, data exchange between the `wlan0` and `eth0` devices is needed and is configured through IPTables routing rules and
-`sysctl` settings. Configure IP forwarding by editing `/etc/sysctl.conf`:
-
-```bash
-# edit this property to be un-commented and set to a value of "1"
-net.ipv4.ip_forward=1
-```
-
-Next, add the following statements to the file `/etc/rc.local` to ensure the IPTables rules are correctly specified:
-
-```bash
-iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
-iptables -A FORWARD -i wlan0 -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
-iptables -A FORWARD -i eth0 -o wlan0 -j ACCEPT
-```
-
-When done, reboot your Raspberry Pi instance for the settings to take effect.
-
 ### Kubernetes Software Installation
 
 On each of the nodes, add the encryption key for the k8s packages, add the k8s repository, and install the packages required to run k8s:
@@ -339,6 +319,27 @@ kubectl apply -f kube-flannel.yaml
 
 At this point, several containers should be deployed and start to configure the network fabric. You can re-run `kubectl get nodes` over the next several
 minutes and should start to see each node change state to `Ready`, indicating the network configuration is complete on that node.
+
+### Firewall and Traffic Forwarding
+
+On each node, data exchange between the `wlan0` and `eth0` devices is needed and is configured through IPTables routing rules and
+`sysctl` settings. Configure IP forwarding by editing `/etc/sysctl.conf`:
+
+```bash
+# edit this property to be un-commented and set to a value of "1"
+net.ipv4.ip_forward=1
+```
+
+Next, add the following statements to the file `/etc/rc.local` to ensure the IPTables rules are correctly specified. Note that this step must be
+done after the k8s software has been installed and configured otherwise the IPTables rules specified below will be overwritten.
+
+```bash
+iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+iptables -A FORWARD -i wlan0 -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth0 -o wlan0 -j ACCEPT
+```
+
+When done, reboot your Raspberry Pi instance for the settings to take effect.
 
 ### Dashboard
 
