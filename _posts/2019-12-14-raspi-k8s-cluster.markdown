@@ -165,14 +165,13 @@ blog):
 ```bash
 allow-hotplug eth0
 iface eth0 inet static
-    address 10.0.0.1
+    address 10.0.0.2
     netmask 255.255.255.0
     broadcast 10.0.0.255
-    gateway 10.0.0.1
 ```
 
 Once the above file is created, reboot the k8s master node so it can claim the IP address. Once booted, SSH back into the device and run
-the `ifconfig` command to ensure the `eth0` device has the IP address `10.0.0.1`.
+the `ifconfig` command to ensure the `eth0` device has the IP address `10.0.0.2`.
 
 ### DHCP Server/Worker Node Network Configuration
 
@@ -197,23 +196,22 @@ ddns-update-style none;
 authoritative;
 
 subnet 10.0.0.0 netmask 255.255.255.0 {
-    option routers 10.0.0.1;
     option broadcast-address 10.0.0.255;
 
     group {
         host node1 {
             hardware ethernet b8:27:eb:d9:e4:38;
-            fixed-address 10.0.0.1;
+            fixed-address 10.0.0.2;
         }
 
         host node2 {
             hardware ethernet b8:27:eb:7f:7b:bb;
-            fixed-address 10.0.0.2;
+            fixed-address 10.0.0.3;
         }
 
         host node3 {
             hardware ethernet b8:27:eb:29:4e:03;
-            fixed-address 10.0.0.3;
+            fixed-address 10.0.0.4;
         }
     }
 }
@@ -230,25 +228,14 @@ INTERFACESv6=""
 Then, restart the DHCP server for the configuration to take effect: `sudo systemctl restart isc-dhcp-server`.
 
 Once the above is complete (and the DHCP server restarts gracefully), issue a reboot command on each of your `node2` and `node3` instances.
-When they have finished rebooting, SSH back into the devices and ensure each has their `eth0` network adapter specified with a `10.0.0.2` and
-`10.0.0.3` IP address, respectively, while the `wlan0` (wireless) adapter remains specified as an IP on your wireless network, ensuring they
+When they have finished rebooting, SSH back into the devices and ensure each has their `eth0` network adapter specified with a `10.0.0.3` and
+`10.0.0.4` IP address, respectively, while the `wlan0` (wireless) adapter remains specified as an IP on your wireless network, ensuring they
 can continue to access the public internet.
-
-### Web Access
-
-Often a reboot of the Raspberry Pi can result in a loss of default route to the internet. To prevent this (and to always ensure that the
-Raspberry Pi boots with a default route to the internet), create a file `/etc/rc.local` with the route addition according to your actual
-default gateway:
-
-```bash
-ip route add default via 192.168.86.1 dev wlan0
-```
 
 ### Firewall and Traffic Forwarding
 
 On each node, data exchange between the `wlan0` and `eth0` devices is needed and is configured through IPTables routing rules and
 `sysctl` settings. Configure IP forwarding by editing `/etc/sysctl.conf`:
-
 
 ```bash
 # edit this property to be un-commented and set to a value of "1"
@@ -267,8 +254,7 @@ When done, reboot your Raspberry Pi instance for the settings to take effect.
 
 ### Kubernetes Software Installation
 
-On each of the nodes, add the encryption key for the k8s packages, add the k8s repository, and install the packages required to run
-k8s:
+On each of the nodes, add the encryption key for the k8s packages, add the k8s repository, and install the packages required to run k8s:
 
 ```bash
 sudo su -
@@ -284,11 +270,11 @@ The required software is now installed on each of the nodes.
 
 ### Configuring the k8s Master
 
-Let's now configure the master instance:
+Let's now configure the master instance - run the following commands on the `node1` k8s master instance::
 
 ```bash
 sudo kubeadm init --pod-network-cidr 10.244.0.0/16 \
-     --apiserver-advertise-address 10.0.0.1 \
+     --apiserver-advertise-address 10.0.0.2 \
      --apiserver-cert-extra-sans kubernetes.cluster.home
 ```
 
@@ -314,7 +300,7 @@ to the command output when running the master install and capture the command to
 look something like the following:
 
 ```bash
-sudo kubeadm join 10.0.0.1:6443 --token <TOKEN> \
+sudo kubeadm join 10.0.0.2:6443 --token <TOKEN> \
      --discovery-token-ca-cert-hash <TOKEN_HASH>
 ```
 
