@@ -161,7 +161,7 @@ in this post when deploying the Traefik Ingress controller (the port that shows 
 `kubectl get services traefik-ingress-service --namespace=kube-system`) and you should see the Hypriot web
 page display: `http://node1:<TRAEFIK-INGRESS-CONTROLLER-PORT>`.
 
-#### Advanced URL Rewriting
+#### Advanced URL Path Rewriting
 
 As mentioned, one of the benefits of an Ingress is the ability to use a single IP and route the requests
 to multiple backends based on the hostname and content sent in the request. This sometimes means creating
@@ -201,9 +201,41 @@ configured `/hypriot-web` and re-submit the request, and you should see the web 
 
 **Note**: Depending on how the web server is written, it may not respond well to the URL rewrites (for instance,
 the Hypriot web container image web service does not display image data because the HTML was formatted as such to
-use root path references to the image content, which is incompatible with the URL rewriting). Test the functionality
+use root path references to the image content, which is incompatible with the URL rewriting given the root path
+would be appended to the image request, resulting in a 404 response for the image). Test the functionality
 when developing and ensure you get the response content you expect if attempting to use rewriting.
 
+#### Advanced Host-Based Matching
+
+It is also common to use DNS and hostnames to perform routing requests. Below is a modification to the `expose-hypriot.yaml`
+configuration file which matches on `hypriot.local` hostname to route requests to the web backend:
+
+```yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hypriot
+spec:
+  rules:
+  - host: hypriot.local
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: hypriot
+          servicePort: 80
+```
+
+Apply the changes:
+
+```bash
+kubectl apply -f expose-ingress.yaml
+```
+
+If you don't have a full-fledged DNS system available to you, this can be tested by creating an entry in your local device
+`/etc/hosts` file that points `hypriot.local` to the IP of one of the k8s hosts. However, more simply, you can make a
+`curl` request and specify the `Host` header directly, which should also work:
+`curl http://node1:<TRAEFIK-INGRESS-CONTROLLER-PORT> --header "Host: hypriot.local"`
 
 ### Credit
 
