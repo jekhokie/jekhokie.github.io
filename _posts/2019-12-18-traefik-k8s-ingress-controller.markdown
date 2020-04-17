@@ -47,9 +47,12 @@ wget https://raw.githubusercontent.com/containous/traefik/v1.7/examples/k8s/trae
 # of the container image - adjust the following
 # property for the DaemonSet object:
 #   spec.template.spec.containers[0].image: traefik:v1.7.20-alpine
+# in addition, specify use of NodePort for the
+# Service object (add a 'type' property)::
+#   spec.type: NodePort
 
-# then, create the DaemonSet and Service
-kubectl apply -f ingress.yml
+# then, create the ServiceAccount, DaemonSet and Service
+kubectl apply -f traefik-ds.yml
 
 # wait for the pods to show "Running" prior to proceeding
 kubectl get pods --selector="name=traefik-ingress-lb" --namespace=kube-system
