@@ -73,7 +73,7 @@ Once all 3 of your nodes have started, move along to configuration.
 
 ### Common/Foundational Configuration
 
-*NOTE*: All commands should be run as the root user unless otherwise specified - so become the root user on each of the nodes
+*NOTE*: All commands should be run as the root user unless otherwise specified, so become the root user on each of the nodes
 and remain root for the duration of this section:
 
 `sudo su -`
@@ -211,7 +211,7 @@ This largely concludes the common k8s installation requirements. We'll now move 
 
 ### k8s Master Configuration
 
-*NOTE*: All commands should be run as the root user and on the master node unless otherwise specified - so become the root
+*NOTE*: All commands should be run as the root user and on the master node unless otherwise specified, so become the root
 user on the master node for the duration of this section:
 
 `sudo su -`
@@ -294,8 +294,8 @@ Again, copy the value printed above - we'll refer to this as `<CERT_HASH>` in th
 
 ### k8s Worker Configuration
 
-*NOTE*: All commands should be run as the root user and on the worker nodes (`node1` and `node2`) unless otherwise specified
-- so become the root user on the worker nodes for the duration of this section:
+*NOTE*: All commands should be run as the root user and on the worker nodes (`node1` and `node2`) unless otherwise specified,
+so become the root user on the worker nodes for the duration of this section:
 
 `sudo su -`
 
