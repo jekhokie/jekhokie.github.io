@@ -185,10 +185,10 @@ exclude=kubelet kubeadm kubectl
 EOF
 
 # install the required components
-yum install  kubelet \
-             kubeadm \
-             kubectl \
-             --disableexcludes=kubernetes
+yum install kubelet \
+            kubeadm \
+            kubectl \
+            --disableexcludes=kubernetes
 
 # start and enable the kubelet service
 systemctl enable --now kubelet
@@ -233,9 +233,9 @@ earlier, with the `<TOKEN>` access token generated just before this step:
 
 ```bash
 kubeadm init --pod-network-cidr=172.16.0.0/24 \
-                 --apiserver-advertise-address=10.11.12.13 \
-                 --apiserver-cert-extra-sans=k8s.cluster.home \
-                 --token=<TOKEN>
+             --apiserver-advertise-address=10.11.12.13 \
+             --apiserver-cert-extra-sans=k8s.cluster.home \
+             --token=<TOKEN>
 ```
 
 The above step will take a minute or two while it initializes the cluster and readies the master. Once complete, we can configure
@@ -313,7 +313,7 @@ node IP address `10.11.12.13` as specified in the sample `Vagrantfile`:
 
 ```bash
 kubeadm join --token=<TOKEN> \
-             10.11.12.13:6443" \
+             10.11.12.13:6443 \
              --discovery-token-ca-cert-hash=sha256:<CERT_HASH>
 ```
 
