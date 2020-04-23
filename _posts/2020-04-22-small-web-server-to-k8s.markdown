@@ -6,7 +6,7 @@ categories: k8s busybox helm
 ---
 
 Simple example deployment of a [busybox](https://busybox.net/) container image to a k8s cluster set up in
-[this]({% post_url 2020-04-21-vagrant-k8s-cluster.markdown %}) previous tutorial using a couple of k8s constructs such as Deployments
+[this]({% post_url 2020-04-21-vagrant-k8s-cluster %}) previous tutorial using a couple of k8s constructs such as Deployments
 and Services, as well as using [Helm](https://helm.sh/). This tutorial will lay the groundwork for future exploration in
 [GitOps](https://www.weave.works/blog/what-is-gitops-really) flows using tools such as [flux](https://fluxcd.io/).
 
@@ -20,7 +20,7 @@ web GET requests with a simple "Hello" response.
 
 ### Prerequisites
 
-It's assumed you follwed the [previous tutorial]({% post_url 2020-04-21-vagrant-k8s-cluster.markdown %}) and have a local k8s cluster running.
+It's assumed you follwed the [previous tutorial]({% post_url 2020-04-21-vagrant-k8s-cluster %}) and have a local k8s cluster running.
 In addition, it's also assumed that you have a functioning `docker` environment that you can run locally (if this part is not true, you
 can skip the next section "Implementation Using Docker").
 
