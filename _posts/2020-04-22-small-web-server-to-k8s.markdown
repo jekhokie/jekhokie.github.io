@@ -98,6 +98,11 @@ $ kubectl delete ns test-busybox
 
 #### Semi-Automatic via Helm Charts
 
+*NOTE*: The descriptions in this section assume a scratch Helm setup and build up contents from there. If you want to get
+a Helm directory structure that already has the changes applied in this section and just install the deployment, refer to
+and operate all `helm` commands from
+[this sample chart director](https://github.com/jekhokie/scriptbox/tree/master/multiple--vagrant-istio-k8s-cluster/charts/busybox-http).
+
 There weren't that many `kubectl` commands to run to get the `busybox` web server deployed, but it's still too manual/error
 prone for our liking, not very repeatable, and iterations are slower than a configuration-driven approach. This is where Helm
 shines. Helm is a package manager for k8s which affords a more declarative and complete approach to packaging and deploying
