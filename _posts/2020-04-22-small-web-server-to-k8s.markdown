@@ -130,10 +130,10 @@ spec:
     spec:
     ...
       containers:
-      - name: {{ .Chart.Name }}
+      - name: \{\{ .Chart.Name \}\}
         ...
         command: ["/bin/sh"]
-        args: ["-c", "{{ .Values.bootCommand }}"]
+        args: ["-c", "\{\{ .Values.bootCommand \}\}"]
         ...
         ports:
           - name: http
@@ -142,12 +142,12 @@ spec:
         livenessProbe:
           httpGet:
             ...
-            port: {{ .Values.healthCheckPort }}
+            port: \{\{ .Values.healthCheckPort \}\}
             ...
         readinessProbe:
           httpGet:
             ...
-            port: {{ .Values.healthCheckPort }}
+            port: \{\{ .Values.healthCheckPort \}\}
             ...
 ...
 ```
