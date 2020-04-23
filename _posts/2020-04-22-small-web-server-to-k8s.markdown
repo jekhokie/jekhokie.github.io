@@ -121,6 +121,7 @@ up to the reader via the official Helm docs. We'll need to update a few files to
 First, edit the `templates/deployment.yaml` file to insert a couple extra arguments into the template that will allow us to
 configure the `busybox` container to run the web server and configure `liveness` and `readiness` probes:
 
+<!-- {% raw %} -->
 ```yaml
 ...
 spec:
@@ -130,10 +131,10 @@ spec:
     spec:
     ...
       containers:
-      - name: \{\{ .Chart.Name \}\}
+      - name: {{ .Chart.Name }}
         ...
         command: ["/bin/sh"]
-        args: ["-c", "\{\{ .Values.bootCommand \}\}"]
+        args: ["-c", "{{ .Values.bootCommand }}"]
         ...
         ports:
           - name: http
@@ -142,15 +143,16 @@ spec:
         livenessProbe:
           httpGet:
             ...
-            port: \{\{ .Values.healthCheckPort \}\}
+            port: {{ .Values.healthCheckPort }}
             ...
         readinessProbe:
           httpGet:
             ...
-            port: \{\{ .Values.healthCheckPort \}\}
+            port: {{ .Values.healthCheckPort }}
             ...
 ...
 ```
+<!-- {% endraw %} -->
 
 Next, edit the `values.yaml` file and update the following parameters (the remainder can be left alone for now) as well as
 include values for the existing parameters we defined in the deployment template:
