@@ -20,7 +20,7 @@ web GET requests with a simple "Hello" response.
 
 ### Prerequisites
 
-It's assumed you follwed the [previous tutorial]({% post_url 2020-04-21-vagrant-k8s-cluster.markdown %) and have a local k8s cluster running.
+It's assumed you follwed the [previous tutorial]({% post_url 2020-04-21-vagrant-k8s-cluster.markdown %}) and have a local k8s cluster running.
 In addition, it's also assumed that you have a functioning `docker` environment that you can run locally (if this part is not true, you
 can skip the next section "Implementation Using Docker").
 
