@@ -337,6 +337,6 @@ The above tutorial was pieced together with some information from the following 
 
 * [Kubernetes](https://kubernetes.io/docs/home/)
 * [Kubernetes - Up and Running (Book)](https://www.amazon.com/Kubernetes-Running-Dive-Future-Infrastructure/dp/1492046531/ref=sr_1_3)
-- [Installing kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
-- [Container runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)
-- [Automating kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/#automating-kubeadm)
+* [Installing kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+* [Container runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)
+* [Automating kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/#automating-kubeadm)
