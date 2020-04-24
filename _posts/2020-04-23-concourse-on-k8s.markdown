@@ -64,6 +64,7 @@ spec:
   hostPath:
     path: "/mnt/data"
 ...
+```
 
 Next, create the Persistent Volumes and validate they exist:
 
