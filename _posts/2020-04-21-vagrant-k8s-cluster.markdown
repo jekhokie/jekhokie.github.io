@@ -227,12 +227,16 @@ kubeadm token generate
 
 Keep the token accessible - we'll refer to the value of the token using `<TOKEN>` in future sections.
 
-Next, we'll initialize the cluster using the token and specify our pod network. In this case, we're using a `172.x` CIDR
+Next, we'll initialize the cluster using the token and specify our pod network. In this case, we're using a `10.x` CIDR
 range/private IP range for our pod network, and we're using the master IP as specified in the example `Vagrantfile` mentioned
-earlier, with the `<TOKEN>` access token generated just before this step:
+earlier, with the `<TOKEN>` access token generated just before this step.
+
+*Note*: It's not generally adviseable to have the k8s nodes in the same network range as the pods and services you wish to manage.
+However, in order to avoid some very complicated network routing configuration, we'll keep everything in the `10.x` IP space to ensure
+routing and paths are easily available for the node to pod communication.
 
 ```bash
-kubeadm init --pod-network-cidr=172.16.0.0/24 \
+kubeadm init --pod-network-cidr=10.12.0.0/24 \
              --apiserver-advertise-address=10.11.12.13 \
              --apiserver-cert-extra-sans=k8s.cluster.home \
              --token=<TOKEN>
@@ -267,7 +271,7 @@ wget https://docs.projectcalico.org/v3.11/manifests/calico.yaml
 vi calico.yaml
 # search for the key/value pair having name 'CALICO_IPV4POOL_CIDR'
 # or search for "192.", and replace the "192.168.0.0/16" default
-# with the pod cidr range we specified earlier: 172.16.0.0/24
+# with the pod cidr range we specified earlier: 10.12.0.0/24
 
 # apply calico resources
 kubectl apply -f calico.yaml
