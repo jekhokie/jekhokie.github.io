@@ -78,7 +78,7 @@ $ kubectl get pods --output=wide -n test-busybox
 # if you are using the previously configured cluster, this is likely one of the following:
 #   - master: 10.11.12.13 (this is only possible if you removed the taint to enable master scheduling of pods)
 #   - node1:  10.11.12.14
-#   - node2:  10.11.12.14
+#   - node2:  10.11.12.15
 
 # get the NodePort for the running pod
 $ kubectl get service busybox -n test-busybox
