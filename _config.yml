@@ -8,7 +8,7 @@ github_username: jekhokie
 # build settings
 markdown: kramdown
 
-paginate: 10
+paginate: 20
 
 collections:
     personalstream:
