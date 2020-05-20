@@ -3,6 +3,7 @@ layout: post
 title:  "Technical Approach"
 date:   2016-12-05 18:16:01 -0400
 categories: tech mentor career
+logo: technical-approach.jpg
 ---
 General technical approach that I take to prototype and experiment with new technologies. The steps
 detailed in this post are iterative and specific to the way that I am able to best analyze and assess

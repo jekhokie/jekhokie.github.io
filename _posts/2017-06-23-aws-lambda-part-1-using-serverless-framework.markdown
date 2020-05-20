@@ -3,6 +3,7 @@ layout: post
 title:  "AWS Lambda - Part 1: Using Serverless Framework"
 date:   2017-06-23 19:04:21 -0400
 categories: nodejs aws lambda serverless
+logo: aws-lambda.jpg
 ---
 Tutorial to document the steps to create an [AWS Lambda](https://aws.amazon.com/lambda/) function
 using the [Serverless Framework](https://github.com/serverless/serverless) for NodeJS using the

@@ -3,6 +3,7 @@ layout: post
 title:  "Tuning Graphite - Version 0.9.15"
 date:   2016-08-25 20:22:31 -0400
 categories: ubuntu graphite carbon whisper tuning
+logo: graphite.jpg
 ---
 (**Version 0.9.15**) Tutorial related to an experience attempting to tune and understand metrics related
 to a [Graphite](http://graphiteapp.org/) instance on an Ubuntu 16.04 virtual machine. These details are

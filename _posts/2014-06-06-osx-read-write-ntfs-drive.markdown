@@ -3,6 +3,7 @@ layout: post
 title:  "OSX - Reading/Writing NTFS Drive"
 date:   2014-06-06 19:43:38 -0400
 categories: osx ntfs
+logo: ntfs-osx.jpg
 ---
 NTFS drives are common given the number of Windows devices in the technology ecosystem.
 However, Mac OSX (at the time of this post) does not have an easy way to read/write

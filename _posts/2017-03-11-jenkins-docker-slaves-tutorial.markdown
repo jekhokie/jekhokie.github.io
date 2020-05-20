@@ -3,6 +3,7 @@ layout: post
 title:  "Jenkins - Docker Slaves Tutorial"
 date:   2017-03-11 16:51:37 -0400
 categories: ubuntu linux jenkins ci devops docker
+logo: docker.jpg
 ---
 Expanding on the [previous Jenkins tutorial]({% post_url 2017-03-11-jenkins-tutorial %}), this tutorial
 will configure Jenkins to utilize Docker containers as build slaves - spinning up Docker containers

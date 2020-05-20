@@ -3,6 +3,7 @@ layout: post
 title:  "MediaWiki Auth0 Integration"
 date:   2016-12-17 19:15:01 -0400
 categories: mediawiki auth0 authentication
+logo: mediawiki.jpg
 ---
 Tutorial on how to install and configure [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) to
 enable [Auth0](https://auth0.com/) as the Authentication provider.

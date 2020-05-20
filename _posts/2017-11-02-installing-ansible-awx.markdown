@@ -3,6 +3,7 @@ layout: post
 title:  "Installing Ansible AWX"
 date:   2017-11-02 20:24:13 -0400
 categories: ubuntu linux ansible devops awx
+logo: awx.jpg
 ---
 Installation and configuration of the [Ansible AWX](https://github.com/ansible/awx) product, the open-source
 version of the RedHat Enterprise [Ansible Tower](https://www.ansible.com/tower) product.

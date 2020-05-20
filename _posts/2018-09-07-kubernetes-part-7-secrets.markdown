@@ -3,6 +3,7 @@ layout: post
 title:  "Kubernetes Part 7: Secrets"
 date:   2018-09-07 20:52:13 -0400
 categories: ubuntu linux python docker container kubernetes minikube
+logo: k8s-secret.jpg
 ---
 Previously we created an application and hard-coded the password for accessing the database (bad). In
 this tutorial, we will learn about Kubernetes Secrets and how to use them to store sensitive information

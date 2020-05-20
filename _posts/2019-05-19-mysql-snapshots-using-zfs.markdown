@@ -3,6 +3,7 @@ layout: post
 title:  "MySQL Snapshots Using ZFS"
 date:   2019-05-19 14:41:00 -0400
 categories: ubuntu linux zfs snapshot mysql
+logo: mysql.jpg
 ---
 This post is an expansion on [this previous post]({% post_url 2019-05-19-zfs-snapshot-rollback %}) detailing basic usage of the
 [Z File System](https://www.freebsd.org/doc/handbook/zfs.html). This post expands on the Z File System example and provides

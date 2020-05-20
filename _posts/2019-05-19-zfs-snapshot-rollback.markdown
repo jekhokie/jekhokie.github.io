@@ -3,6 +3,7 @@ layout: post
 title:  "Snapshot Rollbacks with ZFS"
 date:   2019-05-19 13:47:01 -0400
 categories: ubuntu linux zfs snapshot
+logo: zfs.jpg
 ---
 In creating a CI pipeline, often times the data layer/availability is the trickiest to handle regarding preparing
 for tests. Seeding a database with the right data for starting tests and refreshing it when new/other tests are run

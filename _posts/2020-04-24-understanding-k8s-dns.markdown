@@ -3,6 +3,7 @@ layout: post
 title:  "Understanding k8s DNS"
 date:   2020-04-24 18:23:00 -0400
 categories: k8s coredns
+logo: coredns.jpg
 ---
 
 Kubernetes by default in its most recent versions utilizes [CoreDNS](https://coredns.io/) for handling DNS for the cluster.

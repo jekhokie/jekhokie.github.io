@@ -3,6 +3,7 @@ layout: post
 title:  "Configuring Traefik as k8s Ingress Controller"
 date:   2019-12-18 21:47:00 -0400
 categories: raspberry-pi k8s traefik linux
+logo: traefik.jpg
 ---
 
 [Kubernetes](https://kubernetes.io/) (k8s) clusters can have LoadBalancer-type services expose deployments over a specific

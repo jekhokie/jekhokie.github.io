@@ -3,6 +3,7 @@ layout: post
 title:  "Kubernetes Part 4: Application Deployments (The Smart Way - YAML Files)"
 date:   2018-09-04 23:50:02 -0400
 categories: ubuntu linux python docker container kubernetes minikube
+logo: yaml.jpg
 ---
 Deploying applications via command-line commands is fun and useful for learning the basics
 but is not manageable as it relates to maintaining stateful configurations. This post will

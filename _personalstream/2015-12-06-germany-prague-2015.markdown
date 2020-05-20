@@ -3,6 +3,7 @@ layout: post
 title:  "Germany/Prague 2015"
 date:   2015-12-06 08:00:08 -0400
 categories: germany vacation family
+logo: germany.jpg
 ---
 Over Thanksgiving in 2015, we took a trip to Germany and toured many cities around the
 country. The trip was mostly centered around Christmas Markets (Christkindlmarkt), but

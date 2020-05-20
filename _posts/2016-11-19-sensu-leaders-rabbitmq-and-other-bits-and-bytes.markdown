@@ -3,6 +3,7 @@ layout: post
 title:  "Sensu - Leaders, RabbitMQ, and Other Bits and Bytes"
 date:   2016-11-19 13:53:41 -0400
 categories: sensu rabbitmq transport architecture messaging leader-election
+logo: sensu.jpg
 ---
 Overview and detailed explanation of the [Sensu](https://sensuapp.org/) interaction/utilization of
 [RabbitMQ](https://www.rabbitmq.com/) as a transport, including details related to messages, queues,

@@ -3,6 +3,7 @@ layout: post
 title:  "Dex OIDC Auth with LDAP and Gangway for k8s"
 date:   2020-04-28 19:56:00 -0400
 categories: k8s dex ldap auth gangway oidc
+logo: dex.jpg
 ---
 
 Authentication and self-service for users to interact with k8s is generally fairly common, and enabling this in a very self-service,

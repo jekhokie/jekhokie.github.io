@@ -3,6 +3,7 @@ layout: post
 title:  "Syslog Streaming Data Platform"
 date:   2016-12-27 20:41:23 -0400
 categories: syslog syslog-ng kafka spark streaming logging linux
+logo: syslog-ng.jpg
 ---
 Comprehensive tutorial detailing how to install, configure, and test a processing pipeline that receives
 log messages from any number of syslog-ng clients, processes the incoming log messages real-time, and

@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "ExpressJS with Sequelize as ORM"
-date:   2016-09-07 23:25:31 -0400
+date:   2016-09-08 23:25:31 -0400
 categories: nodejs expressjs sequelize orm database
+logo: expressjs.jpg
 ---
 The NodeJS [ExpressJS](http://expressjs.com/) framework is fantastic for creating performant
 web applications. This post details how to integrate the

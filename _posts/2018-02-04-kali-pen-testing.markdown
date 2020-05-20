@@ -3,6 +3,7 @@ layout: post
 title:  "Kali - Penetration Testing"
 date:   2018-02-04 14:58:15 -0400
 categories: ubuntu linux security pentesting hacking
+logo: kali.jpg
 ---
 This post will list a summary of various tools and examples on how to pen-test a network. Note that
 this post is ONLY intended for ethical/white-hat hacking and is absolutely not intended to be a

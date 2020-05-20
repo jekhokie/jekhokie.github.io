@@ -3,6 +3,7 @@ layout: post
 title:  "Tuning Graphite - Part 2 (More Carbon)"
 date:   2016-09-10 20:48:21 -0400
 categories: ubuntu graphite carbon whisper tuning
+logo: graphite.jpg
 ---
 Pass 2 at a [previously implemented]({% post_url 2016-08-25-tuning-graphite %}) approach to tuning a
 [Graphite](http://graphiteapp.org/) instance on an Ubuntu 16.04 virtual machine. As seen in previous

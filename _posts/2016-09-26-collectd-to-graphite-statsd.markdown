@@ -3,6 +3,7 @@ layout: post
 title:  "Collectd to Graphite/Statsd"
 date:   2016-09-26 17:31:41 -0400
 categories: collectd graphite statsd installation configuration
+logo: collectd.jpg
 ---
 Simple installation/configuration of [collectd](https://collectd.org/) to send metrics/data to a
 [statsd](https://github.com/etsy/statsd/wiki) endpoint for visualization.

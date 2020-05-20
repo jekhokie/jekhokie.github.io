@@ -3,6 +3,7 @@ layout: post
 title:  "Installing SmokePing"
 date:   2016-11-12 13:21:56 -0400
 categories: ubuntu smokeping monitoring
+logo: smokeping.jpg
 ---
 Tutorial and steps related to the installation, configuration, and use of the
 [SmokePing](http://oss.oetiker.ch/smokeping/index.en.html) software product for monitoring latency

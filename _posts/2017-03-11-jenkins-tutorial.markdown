@@ -3,6 +3,7 @@ layout: post
 title:  "Jenkins Tutorial"
 date:   2017-03-11 10:45:19 -0400
 categories: ubuntu linux jenkins ci devops
+logo: jenkins.jpg
 ---
 It has been some time since I've actually installed and used the [Jenkins](https://jenkins.io/)
 software for continuous integration within a CI/CD pipeline. This tutorial is to get re-acquainted

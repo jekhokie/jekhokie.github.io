@@ -3,6 +3,7 @@ layout: post
 title:  "k8s Cluster Usage"
 date:   2019-12-25 22:59:00 -0400
 categories: k8s linux
+logo: k8s.jpg
 ---
 Expanding on [this previous post]({% post_url 2019-12-14-raspi-k8s-cluster %}), this post details some basic fundamentals
 of Kubernetes (k8s) and its purpose. It is intended to be some quick high-level summaries of many core functions and some

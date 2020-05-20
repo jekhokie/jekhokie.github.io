@@ -3,6 +3,7 @@ layout: post
 title:  "Attaching AWS EBS Volume to EC2 Instance"
 date:   2016-08-26 19:28:21 -0400
 categories: ubuntu aws ebs ec2 volume
+logo: aws-ebs.jpg
 ---
 Quick instructions on how to attach a secondary elastic block store GP2 AWS volume to an
 existing Ubuntu AWS EC2 instance.

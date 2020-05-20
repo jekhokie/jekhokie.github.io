@@ -3,6 +3,7 @@ layout: post
 title:  "Deploy Tiny Web Server to k8s"
 date:   2020-04-22 20:31:00 -0400
 categories: k8s busybox helm
+logo: helm.jpg
 ---
 
 Simple example deployment of a [busybox](https://busybox.net/) container image to a k8s cluster set up in

@@ -3,6 +3,7 @@ layout: post
 title:  "ELK Stack Install"
 date:   2018-12-06 19:24:03 -0400
 categories: elk linux elasticsearch kibana filebeat beats ubuntu ansible
+logo: elastic.jpg
 ---
 This is a quick refresher on installing and configuring an ELK stack in an Ubuntu multi-VM cluster.
 For simplicity, we'll use Ansible to configure the target instances and the Ansible code can be found

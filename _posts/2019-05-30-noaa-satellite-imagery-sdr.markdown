@@ -3,6 +3,7 @@ layout: post
 title:  "Acquiring NOAA Weather Satellite Imagery using SDR"
 date:   2019-05-30 20:17:01 -0400
 categories: noaa satellite rf antenna sdr
+logo: weatherimg.jpg
 ---
 In a completely different direction from previous posts, this post will detail some initial findings in exploring the
 world of Software Defined Radio (SDR), which has been around for quite some time. This post details initially setting up

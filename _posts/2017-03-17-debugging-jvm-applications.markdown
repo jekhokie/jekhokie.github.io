@@ -3,6 +3,7 @@ layout: post
 title:  "Debugging JVM Applications"
 date:   2017-03-17 21:20:44 -0400
 categories: ubuntu linux jvm jenkins debugging
+logo: java.jpg
 ---
 Troubleshooting Java applications running within a Java Virtual Machine (JVM) can be difficult.
 From memory/heap tuning to thread deadlocks, knowing different ways to approach problems can be

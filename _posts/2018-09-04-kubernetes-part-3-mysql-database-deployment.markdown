@@ -3,6 +3,7 @@ layout: post
 title:  "Kubernetes Part 3: MySQL Database Deployment"
 date:   2018-09-04 23:31:52 -0400
 categories: ubuntu linux python docker container kubernetes minikube
+logo: k8s-deploy.jpg
 ---
 A bit backwards, but in Part 2 of the series we created and deployed an application. In this post
 we will be deploying a MySQL database for the application to communicate with, and in Part 4 we

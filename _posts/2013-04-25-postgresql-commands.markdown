@@ -3,6 +3,7 @@ layout: post
 title:  "PostgreSQL Commands and Sockets"
 date:   2013-04-25 09:43:21 -0400
 categories: postgres sql
+logo: postgresql.jpg
 ---
 Collection of commands and information related to interaction with a PostgreSQL database. These are
 likely rudimentary but are useful for needing to remember them after not having worked with the

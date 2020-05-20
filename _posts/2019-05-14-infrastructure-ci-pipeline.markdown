@@ -3,6 +3,7 @@ layout: post
 title:  "CI/CD Pipeline for Infrastructure VMs"
 date:   2019-05-14 18:15:02 -0400
 categories: ci cd jenkins virtualbox vm infrastructure docker ansible
+logo: jenkins.jpg
 ---
 In a traditional IT/Operations department, there is often slow feedback in delivering updated VM templates that
 are hardened and tuned (with possibly platform components installed), so by the time someone discovers there is a

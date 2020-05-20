@@ -3,6 +3,7 @@ layout: post
 title:  "Installing Kafka"
 date:   2016-08-23 07:16:14 -0400
 categories: ubuntu kafka
+logo: kafka.jpg
 ---
 Tutorial related to the installation and configuration of [Kafka](http://kafka.apache.org/) on an Ubuntu 16.04
 virtual machine. The instructions and tutorial include setting up the dependent components (ZooKeeper, etc) as

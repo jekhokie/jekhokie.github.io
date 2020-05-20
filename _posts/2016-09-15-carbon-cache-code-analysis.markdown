@@ -3,6 +3,7 @@ layout: post
 title:  "Carbon Cache - Code Analysis"
 date:   2016-09-15 21:11:21 -0400
 categories: ubuntu graphite carbon-cache code-analysis
+logo: graphite.jpg
 ---
 Some notes related to my browsing of the Graphite
 [Carbon Cache Python code](https://github.com/graphite-project/carbon) in an attempt to better

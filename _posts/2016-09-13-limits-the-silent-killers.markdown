@@ -3,6 +3,7 @@ layout: post
 title:  "Limits - The Silent Killers"
 date:   2016-09-13 21:16:04 -0400
 categories: ubuntu ulimit sockets tcp jenkins
+logo: socket.jpg
 ---
 Some troubleshooting techniques when seeing strange behavior on an Ubuntu system related to stalled
 connections through a web request, terminated processes, etc. This post focuses specifically on

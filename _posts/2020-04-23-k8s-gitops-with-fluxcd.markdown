@@ -3,6 +3,7 @@ layout: post
 title:  "k8s GitOps with FluxCD"
 date:   2020-04-23 19:58:00 -0400
 categories: k8s flux gitops busybox helm
+logo: fluxcd.jpg
 ---
 
 GitOps is a highly valuable concept for deploying and maintaining software using machines. This tutorial builds on

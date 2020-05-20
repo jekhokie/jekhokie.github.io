@@ -3,6 +3,7 @@ layout: post
 title:  "Docker on CoreOS using Vagrant"
 date:   2014-10-12 19:12:18 -0400
 categories: vagrant coreos docker container
+logo: docker.jpg
 ---
 Tutorial on how to configure and run a [Docker](https://www.docker.com/) container within a
 host that is running the [CoreOS](https://coreos.com/) operating system. The tutorial uses

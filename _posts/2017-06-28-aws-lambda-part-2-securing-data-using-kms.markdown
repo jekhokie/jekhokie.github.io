@@ -3,6 +3,7 @@ layout: post
 title:  "AWS Lambda - Part 2: Securing Data Using KMS"
 date:   2017-06-28 17:12:43 -0400
 categories: nodejs aws lambda serverless kms
+logo: aws-kms.jpg
 ---
 Expands on the [first post]({% post_url 2017-06-23-aws-lambda-part-1-using-serverless-framework %}) demonstrating
 basic AWS Lambda functionality using NodeJS Serverless by adding security via the

@@ -3,6 +3,7 @@ layout: post
 title:  "Installing Graphite - Version 0.9.15"
 date:   2016-08-25 09:03:14 -0400
 categories: ubuntu graphite carbon whisper
+logo: graphite.jpg
 ---
 (**Version 0.9.15**) Tutorial related to the installation and configuration of
 [Graphite](http://graphiteapp.org/) on an Ubuntu 16.04 virtual machine. Note that these instructions

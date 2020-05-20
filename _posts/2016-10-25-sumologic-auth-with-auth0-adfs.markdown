@@ -3,6 +3,7 @@ layout: post
 title:  "SumoLogic ADFS Auth with Auth0"
 date:   2016-10-25 14:38:21 -0400
 categories: sumologic auth0 adfs saml authentication
+logo: sumologic.jpg
 ---
 Steps to integrate [Auth0](https://auth0.com/) with the [SumoLogic](https://www.sumologic.com/) cloud-hosted
 analytics platform. This tutorial specifically focuses on a typical [ADFS](https://msdn.microsoft.com/en-us/library/bb897402.aspx)

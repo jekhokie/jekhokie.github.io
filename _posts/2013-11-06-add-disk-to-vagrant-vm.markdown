@@ -3,6 +3,7 @@ layout: post
 title:  "Adding a Drive to a Vagrant VM"
 date:   2013-07-11 16:23:18 -0400
 categories: linux vagrant vm virtualbox
+logo: virtualbox.jpg
 ---
 Often times I've created Virtual Machines using [Vagrant](https://www.vagrantup.com/), but
 simply forgot to associate an additional disk/volume for storing information. This is a quick

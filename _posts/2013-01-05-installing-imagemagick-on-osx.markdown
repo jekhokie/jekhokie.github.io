@@ -3,6 +3,7 @@ layout: post
 title:  "Installing ImageMagick on OSX"
 date:   2013-01-05 17:07:38 -0400
 categories: imagemagick osx install
+logo: imagemagick.jpg
 ---
 Instructions related to the installation and configuration of the
 [ImageMagick](http://www.imagemagick.org/script/index.php) product on a Mac OSX operating system. The installation

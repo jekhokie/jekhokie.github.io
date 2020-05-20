@@ -3,6 +3,7 @@ layout: post
 title:  "AWS Elastic Beanstalk Patterns"
 date:   2016-09-29 19:13:51 -0400
 categories: ubuntu aws elastic-beanstalk
+logo: aws-elasticbeanstalk.jpg
 ---
 Details related to the setup and usage patterns of the [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 service as it pertains to development patterns. Explains some useful details related to developing an

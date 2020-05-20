@@ -3,6 +3,7 @@ layout: post
 title:  "SSH Agent Hijacking"
 date:   2019-09-06 23:06:00 -0400
 categories: linux ssh security hijacking
+logo: openssh.jpg
 ---
 Use of SSH Agent Forwarding is a common way to enable re-using SSH keys from a source and jumping through multiple hosts
 over SSH. However, this method comes with a potential risk of hijacking where compromise could mean a malicious actor

@@ -3,6 +3,7 @@ layout: post
 title:  "Becoming a Tech Leader"
 date:   2016-10-29 18:14:18 -0400
 categories: tech mentor career
+logo: tech-leader.jpg
 ---
 Some details related to my career track thus far, including various engagements I've had, some
 details related to my core beliefs driving my technology career, and overall outlook on how to

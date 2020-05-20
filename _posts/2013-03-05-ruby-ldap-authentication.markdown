@@ -3,6 +3,7 @@ layout: post
 title:  "Ruby LDAP Authentication"
 date:   2013-03-05 06:17:28 -0400
 categories: ruby ldap authentication
+logo: ruby.jpg
 ---
 Quick code snippet related to authenticating users in Ruby using an LDAP endpoint. Note
 that this authentication snippet is very basic (successful bind operation is all that is

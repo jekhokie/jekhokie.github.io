@@ -3,6 +3,7 @@ layout: post
 title:  "Using ovftool for Disk Conversion"
 date:   2013-09-12 11:12:09 -0400
 categories: ovftool vmware vm disk
+logo: vmware.jpg
 ---
 Simple example on how to use the [VMware OVF Tool](https://www.vmware.com/support/developer/ovf/)
 to convert Virtual Machine disk image formats.

@@ -3,6 +3,7 @@ layout: post
 title:  "SSH Tunnel"
 date:   2013-07-11 16:23:18 -0400
 categories: linux ssh
+logo: terminal.jpg
 ---
 Often it is useful to have a "jump host" between zones on your network to help with segregating
 various security domains (i.e. PCI). However, this can be cumbersome for system administrators

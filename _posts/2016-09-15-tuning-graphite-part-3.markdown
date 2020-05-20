@@ -3,6 +3,7 @@ layout: post
 title:  "Tuning Graphite - Part 3 (C-Relay)"
 date:   2016-09-15 22:02:21 -0400
 categories: ubuntu graphite carbon c-relay whisper tuning
+logo: graphite.jpg
 ---
 Pass 3 extending a [previously implemented]({% post_url 2016-09-10-tuning-graphite-part-2 %}) approach
 to tuning a [Graphite](http://graphiteapp.org/) instance on an Ubuntu 16.04 virtual machine. As seen in

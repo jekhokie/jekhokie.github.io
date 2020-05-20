@@ -3,6 +3,7 @@ layout: post
 title:  "ESP8266 Temperature Sensor"
 date:   2019-01-25 19:28:00 -0400
 categories: esp8266 wifi arduino electronics
+logo: esp8266.jpg
 ---
 This post is an attempt to detail how to use (and program) an [ESP8266](https://www.esp8266.com/) wifi board with
 a [DHT22](https://learn.adafruit.com/dht/overview) temperature/humidity sensor to send data to an endpoint running

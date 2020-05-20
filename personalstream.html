@@ -6,21 +6,27 @@ weight: 80
 ---
 
 <div class="home">
-    <h1 class="page-heading">Personalstream</h1>
+    <h1 class="page-heading mx-1">Personalstream</h1>
 
-    <ul class="post-list">
+    <ul class="list-unstyled mx-1">
         {% for post in site.personalstream reversed %}
-            <li>
-                <h2 class="post-link-container">
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
+            <li class="media post-card">
+                <img src="{{ site.baseurl }}/assets/heading_images/{{ post.logo }}" class="align-self-top mr-3 mt-1 d-none d-sm-block" alt="post-image">
 
-                <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1 post-heading">
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    </h5>
 
-                {{ post.excerpt }}
+                    <div class="post-content mb-0">
+                        {{ post.excerpt }}
+
+                        <div class="post-meta ml-auto mt-3">{{ post.date | date: "%b %-d, %Y" }}</div>
+                    </div>
+                </div>
             </li>
         {% endfor %}
     </ul>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <p class="rss-subscribe mx-1">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 </div>

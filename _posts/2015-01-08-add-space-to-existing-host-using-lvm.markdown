@@ -3,6 +3,7 @@ layout: post
 title:  "Adding Space to Existing LVM Setup"
 date:   2015-01-08 07:12:31 -0400
 categories: linux lvm disk
+logo: lvm-disk.jpg
 ---
 Useful commands/hints in extending an LVM partition to add disk space to an existing
 virtual machine. This is especially useful if you do not wish to add an extra drive

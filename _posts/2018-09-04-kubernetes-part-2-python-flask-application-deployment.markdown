@@ -3,6 +3,7 @@ layout: post
 title:  "Kubernetes Part 2: Python Flask Application Deployment"
 date:   2018-09-04 23:15:48 -0400
 categories: ubuntu linux python docker container kubernetes minikube
+logo: k8s-deploy.jpg
 ---
 With a functioning Kubernetes cluster, this post is the next step in the series that will go over
 how to create, package, and deploy a basic Python Flask Hello World application to the cluster.

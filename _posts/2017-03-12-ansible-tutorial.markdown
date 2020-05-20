@@ -3,6 +3,7 @@ layout: post
 title:  "Ansible Tutorial"
 date:   2017-03-12 16:08:51 -0400
 categories: ubuntu linux ansible devops
+logo: ansible.jpg
 ---
 Keeping with the "things I haven't used in a while" theme, this tutorial is a re-visit of the
 [Ansible](https://www.ansible.com/) automation platform. It will cover the basics of how to install

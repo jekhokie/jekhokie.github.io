@@ -3,6 +3,7 @@ layout: post
 title:  "Raspberry Pi RX/TX with XBee Devices"
 date:   2018-12-30 16:30:00 -0400
 categories: raspberry-pi raspbian xbee python linux electronics
+logo: xbees1.jpg
 ---
 Experimenting with electronics (and somewhat re-learning much of what I've forgotten since college), this post
 details how to utilize [Raspberry Pi](https://www.raspberrypi.org/) controllers to communicate with each other

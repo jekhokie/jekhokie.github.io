@@ -3,6 +3,7 @@ layout: post
 title:  "South Africa 2016"
 date:   2016-10-20 08:14:08 -0400
 categories: south-africa vacation family
+logo: south-africa.jpg
 ---
 In October of 2016 I was fortunate enough to take a trip down to South Africa for my brother's
 wedding. Most of our family went down for the wedding and made a 2 week vacation out of the

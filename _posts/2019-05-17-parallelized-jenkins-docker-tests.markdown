@@ -3,6 +3,7 @@ layout: post
 title:  "Parallelized Jenkins Jobs using Docker"
 date:   2019-05-16 19:15:02 -0400
 categories: ci cd jenkins virtualbox vm infrastructure docker ansible parallel
+logo: docker.jpg
 ---
 As software test suites grow, so does the timeline for feedback to a developer given the length of time it takes to
 run the tests. In a monolithic environment this problem can be compounded if the suite of tests is singular and

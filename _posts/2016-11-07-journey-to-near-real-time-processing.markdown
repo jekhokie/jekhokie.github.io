@@ -3,6 +3,7 @@ layout: post
 title:  "Journey to Near-Real-Time Processing"
 date:   2016-11-07 20:32:46 -0400
 categories: ubuntu spark spark-streaming kafka zookeeper scala
+logo: spark-streaming.jpg
 ---
 Tutorial and steps related to the installation, configuration, and use of a technology stack that provides
 near-real-time data processing capabilities. Given some of the technologies are fairly new to me, this

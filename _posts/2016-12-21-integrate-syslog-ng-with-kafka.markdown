@@ -3,6 +3,7 @@ layout: post
 title:  "Integrate syslog-ng with Kafka"
 date:   2016-12-21 19:14:01 -0400
 categories: syslog syslog-ng kafka logging linux
+logo: kafka.jpg
 ---
 Tutorial on how to integrate [syslog-ng](https://syslog-ng.org/) with [Apache Kafka](https://kafka.apache.org/)
 to allow forward and store of syslog logging for future stream and event processing of the logs.

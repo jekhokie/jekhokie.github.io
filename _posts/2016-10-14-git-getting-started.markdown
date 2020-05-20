@@ -3,6 +3,7 @@ layout: post
 title:  "Git - Getting Started"
 date:   2016-10-14 18:18:41 -0400
 categories: ubuntu git source-control
+logo: git.jpg
 ---
 This tutorial is quite basic/for beginners, but a good start to learn how to leverage the git source
 control system. It also speaks briefly about the differences between git and svn. Commands contained

@@ -3,6 +3,7 @@ layout: post
 title:  "Kubernetes Part 6: Rolling Updates"
 date:   2018-09-07 20:14:03 -0400
 categories: ubuntu linux python docker container kubernetes minikube
+logo: k8s-replicaset.jpg
 ---
 Now that we have a running application hooked up to a database, we will explore how to go
 about rolling updates (zero-downtime updates) of the application.

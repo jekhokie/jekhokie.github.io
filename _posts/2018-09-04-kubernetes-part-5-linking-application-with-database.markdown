@@ -3,6 +3,7 @@ layout: post
 title:  "Kubernetes Part 5: Linking Application with Database (Discovery)"
 date:   2018-09-04 23:55:22 -0400
 categories: ubuntu linux python docker container kubernetes minikube
+logo: k8s-service.jpg
 ---
 In this post, we will hook the previously-created application up to the now deployed MySQL
 database. This post will utilize DNS for discovery and hard-coded credential information,

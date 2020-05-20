@@ -3,6 +3,7 @@ layout: post
 title:  "Ubuntu PXE Boot Tutorial"
 date:   2017-02-08 19:15:29 -0400
 categories: ubuntu linux pxe automation
+logo: ubuntu.jpg
 ---
 Tutorial explaining how to configure an Ubuntu 16.04 server as a
 [Preboot Execution Environment (PXE)](https://en.wikipedia.org/wiki/Preboot_Execution_Environment)

@@ -3,6 +3,7 @@ layout: post
 title:  "Kubernetes Part 1: Core Concepts and Installation (Minikube)"
 date:   2018-09-04 22:05:11 -0400
 categories: ubuntu linux docker container kubernetes minikube
+logo: minikube.jpg
 ---
 Although familiar with [Docker](https://www.docker.com/) containers and superficially played
 with [Kubernetes](https://kubernetes.io/) in the past, I've not taken the required time to learn the

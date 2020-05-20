@@ -3,6 +3,7 @@ layout: post
 title:  "Jenkins CI with Python in Docker"
 date:   2018-07-14 18:41:00 -0400
 categories: ubuntu linux jenkins docker container ci python
+logo: jenkins.jpg
 ---
 An attempt to bring together various components including Jenkins for Continuous Integration (CI),
 Python for development, and Docker containers for consistency/quality/speed. The post will incrementally

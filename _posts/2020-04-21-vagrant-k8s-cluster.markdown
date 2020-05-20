@@ -3,6 +3,7 @@ layout: post
 title:  "Vagrant k8s Cluster"
 date:   2020-04-21 20:31:00 -0400
 categories: k8s vagrant ansible virtualbox linux
+logo: vagrant.jpg
 ---
 This post details a different way to experiment with a [Kubernetes](https://kubernetes.io/) cluster that is a bit more
 advanced and powerful than utilizing minikube on your local workstation. The tutorial walks you through setting up a

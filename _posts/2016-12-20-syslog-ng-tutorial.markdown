@@ -3,6 +3,7 @@ layout: post
 title:  "syslog-ng Tutorial"
 date:   2016-12-20 21:14:01 -0400
 categories: syslog syslog-ng logging linux security
+logo: syslog-ng.jpg
 ---
 Tutorial on how to install and configure [syslog-ng](https://syslog-ng.org/) for system logging,
 including some more advanced configurations such as configuring a central server and SSL for

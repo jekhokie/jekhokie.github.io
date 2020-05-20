@@ -3,6 +3,7 @@ layout: post
 title:  "Kubernetes Part 9: ConfigMaps"
 date:   2018-09-08 22:54:27 -0400
 categories: ubuntu linux python docker container kubernetes minikube
+logo: k8s-configmap.jpg
 ---
 Now that we have core components ironed out, let's talk about configuration. We somewhat jumped ahead
 in our previous post about Secrets before we addressed configuration strategy, so we will revisit the

@@ -3,6 +3,7 @@ layout: post
 title:  "Kubernetes Part 8: Persistent Volumes"
 date:   2018-09-08 20:21:13 -0400
 categories: ubuntu linux python docker container kubernetes minikube
+logo: k8s-persistentvolume.jpg
 ---
 Up to this point, any storage utilized by Pods will disappear if and when the Pod/Container is destroyed.
 This is acceptable for stateless applications but less desirable for stateful applications and databases.

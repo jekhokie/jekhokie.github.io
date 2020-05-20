@@ -3,6 +3,7 @@ layout: post
 title:  "RabbitMQ Getting Started"
 date:   2016-09-27 18:53:11 -0400
 categories: rabbitmq ha clustering installation configuration
+logo: rabbitmq.jpg
 ---
 Tutorial related to installing and configuring [RabbitMQ](https://www.rabbitmq.com/), including
 clustering, high-availability, and testing.

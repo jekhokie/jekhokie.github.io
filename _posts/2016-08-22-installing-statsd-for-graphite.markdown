@@ -3,6 +3,7 @@ layout: post
 title:  "Installing Statsd for Graphite"
 date:   2016-08-22 07:26:04 -0400
 categories: ubuntu graphite statsd
+logo: statsd.jpg
 ---
 Tutorial related to the installation and configuration of [Statsd](https://github.com/etsy/statsd/wiki)
 on an Ubuntu 16.04 virtual machine. Note that these instructions follow the "Install from Source" process

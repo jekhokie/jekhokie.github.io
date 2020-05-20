@@ -3,6 +3,7 @@ layout: post
 title:  "Apache Authentication with Auth0"
 date:   2016-10-19 21:22:31 -0400
 categories: ubuntu apache auth0 authentication openid-connect
+logo: auth0.jpg
 ---
 [Auth0](https://auth0.com/) is a fantastic cloud-hosted authentication mechanism providing many different
 authentication connection possibilities (social networks, email, ADFS, etc). The SDKs and libraries for

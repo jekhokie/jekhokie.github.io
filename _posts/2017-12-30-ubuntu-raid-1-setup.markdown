@@ -3,6 +3,7 @@ layout: post
 title:  "Ubuntu RAID 1 Setup"
 date:   2017-12-30 20:45:23 -0400
 categories: ubuntu linux raid sysadmin
+logo: ubuntu.jpg
 ---
 How to set up RAID 1 (redundant copy) on an Ubuntu 17.04 instance.
 

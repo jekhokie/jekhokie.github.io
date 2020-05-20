@@ -3,6 +3,7 @@ layout: post
 title:  "AWS Active Directory Domain Setup"
 date:   2017-02-06 23:22:16 -0400
 categories: aws active-directory domain windows
+logo: ms-ad.jpg
 ---
 Details on setting up an Active Directory domain in an Amazon Web Services Virtual Private Cloud.
 Includes domain-joining a Windows-based virtual machine to the domain as well.

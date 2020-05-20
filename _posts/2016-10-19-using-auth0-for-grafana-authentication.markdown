@@ -3,6 +3,7 @@ layout: post
 title:  "Using Auth0 for Grafana Authentication"
 date:   2016-10-19 22:11:31 -0400
 categories: ubuntu grafana apache auth0 authentication openid-connect
+logo: grafana.jpg
 ---
 Expanding on a [previous post]({% post_url 2016-10-19-apache-authentication-with-auth0 %}) related
 to installing and configuring Apache2 for authentication through Auth0, this post expands the scope

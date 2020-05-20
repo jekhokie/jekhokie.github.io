@@ -3,6 +3,7 @@ layout: post
 title:  "Concourse on k8s"
 date:   2020-04-23 22:48:00 -0400
 categories: k8s concourse helm
+logo: concourse.jpg
 ---
 
 [Concourse](https://concourse-ci.org/) is a fantastic orchestration component that can be used in a very pluggable/flexible way. This

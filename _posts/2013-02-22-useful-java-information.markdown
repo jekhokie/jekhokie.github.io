@@ -3,6 +3,7 @@ layout: post
 title:  "Useful Java Information"
 date:   2013-03-22 11:02:18 -0400
 categories: linux osx java jnlp
+logo: java.jpg
 ---
 A collection of useful information related to Java debugging, troubleshooting, and general use of
 products that run in a JVM. None of the commands/procedures warrant their own post (too short), so

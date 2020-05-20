@@ -3,6 +3,7 @@ layout: post
 title:  "Simple NFS"
 date:   2014-07-17 09:31:28 -0400
 categories: linux nfs
+logo: nfs.jpg
 ---
 Simple tutorial (very basic) on how to install and configure NFS for sharing a file system
 between two hosts. This tutorial does not go into detail about the many capabilities of

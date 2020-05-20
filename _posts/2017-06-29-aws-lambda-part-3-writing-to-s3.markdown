@@ -3,6 +3,7 @@ layout: post
 title:  "AWS Lambda - Part 3: Writing Data to S3"
 date:   2017-06-29 19:31:31 -0400
 categories: nodejs aws lambda serverless s3
+logo: aws-s3.jpg
 ---
 Tutorial that expands on [this previous post]({% post_url 2017-06-28-aws-lambda-part-2-securing-data-using-kms %})
 demonstrating how to take data in to an AWS Lambda function and write the data in a consistent file-naming format
