@@ -1,9 +1,9 @@
-<header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-light container px-1">
+<header class="col-12 col-md-2 p-0 bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark flex-md-column flex-row py-2">
         <a class="navbar-brand" href="{{ site.baseurl }}/">
-            {{ site.title }}
-            |
-            <span class="site-sub-title">{{ site.sub_title }}</span>
+            <img src="{{ site.baseurl }}/assets/images/other/headshot.png" class="rounded-circle img-fluid mx-auto d-block headshot" alt="whoami">
+            <div class="site-title">{{ site.title }}</div>
+            <div class="site-sub-title">{{ site.sub_title }}</div>
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,20 +11,20 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active ml-2">
-                    <a class="nav-link" href="{{ site.baseurl }}/">Techstream</a>
+            <ul class="navbar-nav container w-100 flex-md-column">
+                <li class="nav-item">
+                    <a class="nav-link pl-0" href="{{ site.baseurl }}/"><span class="d-md-inline">{{ "Techstream" | upcase }}</span></a>
                 </li>
                 {% assign page_list = site.pages | sort:"weight" %}
 
                 {% for my_page in page_list %}
                     {% if my_page.title %}
-                        <li class="nav-item ml-2">
-                            <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+                        <li class="nav-item {% if forloop.last == true %}nav-item-last{% endif %}">
+                            <a class="nav-link pl-0" href="{{ my_page.url | prepend: site.baseurl }}"><span class="d-md-inline">{{ my_page.title | upcase }}</span></a>
                         <li>
                     {% endif %}
                 {% endfor %}
-            </div>
+            </ul>
         </div>
     </nav>
 </header>

@@ -2,12 +2,15 @@
     {% include head.html %}
 
     <body>
-        {% include header.html %}
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+               {% include header.html %}
 
-        <div class="page-content container">
-            {{ content }}
+               <main class="col offset-md-2 bg-faded py-4 px-3 page-content">
+                   {{ content }}
+                   {% include footer.html %}
+               </main>
+           </div>
         </div>
-
-        {% include footer.html %}
     </body>
 </html>

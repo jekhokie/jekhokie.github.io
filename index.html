@@ -6,7 +6,7 @@ paginate: true
 
     <ul class="list-unstyled mx-1">
         {% for post in paginator.posts %}
-            <li class="media post-card">
+            <li class="media post-card {% if forloop.last == true %}post-card-last{% endif %}">
                 <img src="{{ site.baseurl }}/assets/heading_images/{{ post.logo }}" class="align-self-top mr-3 mt-1 d-none d-sm-block" alt="post-image">
 
                 <div class="media-body">
