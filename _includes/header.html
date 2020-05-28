@@ -1,11 +1,15 @@
 <header class="col-12 col-md-2 p-0 bg-dark fixed-top">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark flex-md-column flex-row py-2">
-        <a class="navbar-brand mx-0" href="{{ site.baseurl }}/">
-            <img src="{{ site.baseurl }}/assets/images/other/headshot.png" class="rounded-circle img-fluid mx-auto d-block headshot" alt="whoami">
-            <div class="site-title mt-2">{{ site.title }}</div>
-            <div class="site-sub-title mb-1">[&nbsp;{{ site.sub_title }}&nbsp;]</div>
-            <div class="site-sub-title-subtext mb-3">Tech Learnings & Doings</div>
-        </a>
+        <div class="navbar-brand-joined" style="display: flex; align-items: center;">
+            <a class="navbar-brand mx-0" href="{{ site.baseurl }}/">
+                <img src="{{ site.baseurl }}/assets/images/other/headshot.png" class="rounded-circle img-fluid mx-auto d-block headshot" alt="whoami">
+            </a>
+
+            <span class="site-title mt-2">{{ site.title }}</span>
+        </div>
+
+        <div class="site-sub-title mb-1">[&nbsp;{{ site.sub_title }}&nbsp;]</div>
+        <div class="site-sub-title-subtext mb-3">Tech Learnings & Doings</div>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
