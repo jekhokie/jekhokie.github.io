@@ -1,9 +1,10 @@
 <header class="col-12 col-md-2 p-0 bg-dark fixed-top">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark flex-md-column flex-row py-2">
-        <a class="navbar-brand" href="{{ site.baseurl }}/">
+        <a class="navbar-brand mx-0" href="{{ site.baseurl }}/">
             <img src="{{ site.baseurl }}/assets/images/other/headshot.png" class="rounded-circle img-fluid mx-auto d-block headshot" alt="whoami">
-            <div class="site-title">{{ site.title }}</div>
-            <div class="site-sub-title">{{ site.sub_title }}</div>
+            <div class="site-title mt-2">{{ site.title }}</div>
+            <div class="site-sub-title mb-1">[&nbsp;{{ site.sub_title }}&nbsp;]</div>
+            <div class="site-sub-title-subtext mb-3">Tech Learnings & Doings</div>
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +12,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav container w-100 flex-md-column">
+            <ul class="navbar-nav container w-100 flex-md-column px-0">
                 <li class="nav-item">
                     <a class="nav-link pl-0" href="{{ site.baseurl }}/"><span class="d-md-inline">{{ "Techstream" | upcase }}</span></a>
                 </li>
@@ -25,6 +26,11 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        </div>
+
+        <div class="social-links mt-3">
+            <a href="https://www.linkedin.com/in/justin-karimi-cissp/" target="_blank"><i class="fab fa-linkedin fa-2x mx-1"></i></a>
+            <a href="https://github.com/jekhokie" target="_blank"><i class="fab fa-github fa-2x mx-1"></i></a>
         </div>
     </nav>
 </header>

@@ -3,7 +3,6 @@ sub_title: jekhokie
 description: >
     Technical Learnings and Doings
 url: "https://jekhokie.github.io"
-github_username: jekhokie
 
 # build settings
 markdown: kramdown

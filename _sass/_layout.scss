@@ -21,13 +21,14 @@
         img.headshot {
             display: inline-block!important;
             width: 40px;
+            margin-right: 8px!important;
         }
 
         .site-title {
             display: inline-block!important;
         }
 
-        .site-sub-title {
+        .site-sub-title,.site-sub-title-subtext {
             display: none;
         }
     }
@@ -51,16 +52,35 @@
         }
     }
 
+    .social-links {
+        display: none;
+    }
+
     main.page-content {
         margin-top: 60px;
     }
 }
 
+@media (max-width: 1024px) {
+    .about-me {
+        .media {
+            display: block;
+        }
+
+        img.headshot {
+            display: block;
+            margin-left: auto!important;
+            margin-right: auto!important;
+            margin-bottom: 12px;
+        }
+    }
+}
+
 .navbar-brand {
     color: rgb(51, 51, 51);
-    font-size: 24px;
     font-weight: 300;
     text-align: center;
+    letter-spacing: .1rem;
 
     img.headshot {
         max-width: 40%;
@@ -69,12 +89,16 @@
     }
 
     .site-title {
-        margin-top: 12px;
+      font-size: 22px;
     }
 
     .site-sub-title {
-        margin-bottom: 24px;
-        font-size: 20px;
+        font-size: 16px;
+    }
+
+    .site-sub-title-subtext {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
         font-style: italic;
     }
 }
@@ -96,6 +120,16 @@
         li.nav-item-last {
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
+    }
+}
+
+.social-links {
+    width: 100%;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.75);
     }
 }
 
@@ -241,4 +275,13 @@ nav.pagination-nav ul {
 .rss-subscribe {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.84);
+}
+
+/**
+ * About Me
+ */
+.about-me {
+    img.headshot {
+        max-width: 200px;
+    }
 }
