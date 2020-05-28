@@ -6,15 +6,6 @@
         height: 100%;
         width: 250px!important;
         min-width: 250px!important;
-
-        .navbar-brand-joined {
-            display: block!important;
-
-            .site-title {
-                display: inline-block;
-                width: 100%;
-            }
-        }
     }
 
     main.page-content {
@@ -23,28 +14,25 @@
 }
 
 @media (max-width: 767px) {
-    .navbar-brand-joined {
-        display: flex;
-        align-items: center;
+    display: flex;
+    align-items: center;
 
-        .navbar-brand {
-            text-align: left!important;
-            line-height: 18px;
-            height: 50px;
+    .navbar-brand {
+        text-align: left!important;
+        line-height: 18px;
+
+        img.headshot {
+            display: inline-block!important;
             width: 40px;
-
-            img.headshot {
-                display: inline-block!important;
-                max-width: 100%;
-                max-height: 100%;
-                margin-right: 0px!important;
-            }
+            margin-right: 0px!important;
         }
 
         .site-title {
             display: inline-block!important;
             margin-top: 0px!important;
             margin-left: 8px;
+            height: 100%;
+            vertical-align: middle;
         }
     }
 
@@ -106,9 +94,7 @@
         border: 2px solid #dee2e6;
         background-color: #fff;
     }
-}
 
-.navbar {
     .site-title {
         color: #fff;
         font-weight: 300;
@@ -116,18 +102,33 @@
         letter-spacing: .1rem;
         font-size: 22px;
     }
+}
 
+.navbar {
     .site-sub-title {
+        letter-spacing: .07rem;
         color: #fff;
         font-weight: 300;
         text-align: center;
-        letter-spacing: .1rem;
         font-size: 16px;
+
+        a {
+            color: #ccc;
+
+            i.fa-github {
+                margin-right: 4px;
+            }
+        }
+
+        a:hover {
+            color: #fff;
+        }
     }
 
     .site-sub-title-subtext {
         font-size: 14px;
         color: rgba(255, 255, 255, 0.8);
+        letter-spacing: .1rem;
         font-style: italic;
     }
 }

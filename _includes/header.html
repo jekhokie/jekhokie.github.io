@@ -1,15 +1,12 @@
 <header class="col-12 col-md-2 p-0 bg-dark fixed-top">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark flex-md-column flex-row py-2">
-        <div class="navbar-brand-joined" style="display: flex; align-items: center;">
-            <a class="navbar-brand mx-0" href="{{ site.baseurl }}/">
-                <img src="{{ site.baseurl }}/assets/images/other/headshot.png" class="rounded-circle img-fluid mx-auto d-block headshot" alt="whoami">
-            </a>
-
+        <a class="navbar-brand mx-0 pb-0" href="{{ site.baseurl }}/">
+            <img src="{{ site.baseurl }}/assets/images/other/headshot.png" class="rounded-circle img-fluid mx-auto d-block headshot" alt="whoami">
             <span class="site-title mt-2">{{ site.title }}</span>
-        </div>
+        </a>
 
-        <div class="site-sub-title mb-1">[&nbsp;{{ site.sub_title }}&nbsp;]</div>
-        <div class="site-sub-title-subtext mb-3">Tech Learnings & Doings</div>
+        <div class="site-sub-title my-1"><a href="https://github.com/jekhokie"><i class="fab fa-github"></i>{{ site.sub_title }}</a></div>
+        <div class="site-sub-title-subtext mt-1 mb-3">Tech Learnings & Doings</div>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -33,8 +30,8 @@
         </div>
 
         <div class="social-links mt-3">
-            <a href="https://www.linkedin.com/in/justin-karimi-cissp/" target="_blank"><i class="fab fa-linkedin fa-2x mx-1"></i></a>
-            <a href="https://github.com/jekhokie" target="_blank"><i class="fab fa-github fa-2x mx-1"></i></a>
+            <a href="https://www.linkedin.com/in/justin-karimi-cissp/" target="_blank"><i class="fab fa-linkedin fa-2x mx-2"></i></a>
+            <a href="https://github.com/jekhokie" target="_blank"><i class="fab fa-github fa-2x mx-2"></i></a>
         </div>
     </nav>
 </header>
