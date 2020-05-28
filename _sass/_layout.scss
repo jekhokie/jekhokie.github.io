@@ -105,6 +105,8 @@
 }
 
 .navbar {
+    height: 100%;
+
     .site-sub-title {
         letter-spacing: .07rem;
         color: #fff;
@@ -136,6 +138,7 @@
 .navbar-collapse {
     text-align: center;
     width: 90%;
+    flex-grow: unset;
 
     ul {
         margin-left: 0px;
@@ -154,6 +157,7 @@
 }
 
 .social-links {
+    flex-grow: 1;
     width: 100%;
     text-align: center;
 
