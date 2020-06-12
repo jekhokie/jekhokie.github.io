@@ -6,7 +6,10 @@ weight: 80
 ---
 
 <div class="home">
-    <h1 class="page-heading mx-1">Personalstream</h1>
+    <div class="page-heading-container">
+        <h1 class="page-heading mx-1">Personalstream</h1>
+        {% include buy_coffee.html %}
+    </div>
 
     <ul class="list-unstyled mx-1">
         {% for post in site.personalstream reversed %}

@@ -165,6 +165,19 @@
         text-decoration: none;
         color: rgba(255, 255, 255, 0.75);
     }
+
+    .donate {
+        margin-top: 20px;
+        color: rgba(255, 255, 255, 0.75);
+        font-style: italic;
+
+        a.bmc-button {
+            font-style: normal;
+            color: #FFFFFF;
+            background-color: #FF5F5F !important;
+            margin-top: 5px !important;
+        }
+    }
 }
 
 /**
@@ -199,10 +212,22 @@
     padding: $spacing-unit 0;
 }
 
-.page-heading {
-    font-size: 20px;
+.page-heading-container {
     border-bottom: 1px solid rgba(0, 0, 0, .125);
-    padding-bottom: 24px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+
+    .page-heading {
+        display: inline;
+        line-height: 33px;
+        font-size: 20px;
+        vertical-align: top;
+    }
+
+    a.bmc-button {
+        display: inline;
+        float: right;
+    }
 }
 
 .post-card {
@@ -257,11 +282,23 @@ nav.pagination-nav ul {
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
+    margin-bottom: 12px;
 
     .post-meta {
         color: rgba(0, 0, 0, 0.54);
         font-style: italic;
+    }
+
+    span.donate {
+        display: inline-block;
+        font-style: italic;
+        height: 35px;
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+
+    a.bmc-button {
+        background-color: #5F7FFF !important;
     }
 }
 
@@ -300,6 +337,20 @@ nav.pagination-nav ul {
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+}
+
+.donate-footer {
+    span.donate {
+        display: inline-block;
+        font-style: italic;
+        height: 35px;
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+
+    a.bmc-button {
+        background-color: #5F7FFF !important;
     }
 }
 

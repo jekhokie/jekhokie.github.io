@@ -2,7 +2,10 @@
 layout: default
 paginate: true
 ---
-    <h1 class="page-heading mx-1">Techstream</h1>
+    <div class="page-heading-container">
+        <h1 class="page-heading mx-1">Techstream</h1>
+        {% include buy_coffee.html %}
+    </div>
 
     <ul class="list-unstyled mx-1">
         {% for post in paginator.posts %}
