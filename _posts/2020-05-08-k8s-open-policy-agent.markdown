@@ -6,7 +6,7 @@ categories: k8s opa admission-controller
 logo: opa.jpg
 ---
 
-{{ page.test }} [Open Policy Agent](https://openpolicyagent.org/) (OPA) enables multi-platform policy control of resources. There are many use cases and
+[Open Policy Agent](https://openpolicyagent.org/) (OPA) enables multi-platform policy control of resources. There are many use cases and
 applications for OPA (Terraform, Envoy, Kubernetes, etc.) but this post will be focused on enabling OPA as an admission controller to define
 allowed/denied policies related to resource requests within Kubernetes. There is a more first-class integration between OPA and Kubernetes
 known as [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper), which is out of scope for this particular tutorial, which will
