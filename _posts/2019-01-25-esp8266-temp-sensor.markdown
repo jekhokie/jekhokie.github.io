@@ -40,7 +40,7 @@ flash settings correct for the board type as well as the baud rate (which appare
 what type of board you receive and from which manufacturer). This tutorial will be using the ESP8266-01 device with
 the black board which has 1MB of flash memory (not the blue board, which has 512kB of flash memory). There are a few
 different ways to flash the board, and by default the board comes pre-loaded with AT-controllable software which is
-pretty old-fashioned. The first is via using the command-line utility (esptool.py)[https://github.com/espressif/esptool],
+pretty old-fashioned. The first is via using the command-line utility [esptool.py](https://github.com/espressif/esptool),
 while the second is using the Arduino IDE to flash the device with the code you wish to program the board with. We
 will focus on the latter (Arduino IDE) as it is more user friendly.
 
