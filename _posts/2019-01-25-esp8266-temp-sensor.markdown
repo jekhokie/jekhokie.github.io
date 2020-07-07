@@ -168,7 +168,7 @@ Include Library -> Add .ZIP Library... and select the library to load it into th
 Next, we'll create the software to perform the read and write the output to the Serial console. Copy/paste the
 following code to your Sketch file:
 
-```bash
+```c
 // based on the example script here: https://github.com/adafruit/DHT-sensor-library/blob/master/examples/DHTtester/DHTtester.ino
 
 #include <DHT.h>
@@ -246,7 +246,7 @@ We will need to load the Wifi libraries for the ESP8266 to function appropriatel
 with the board import into the Arduino IDE so there is no need to import libraries. Update the code in your sketch
 to reflect the following:
 
-```bash
+```c
 // based on the example script here: https://github.com/adafruit/DHT-sensor-library/blob/master/examples/DHTtester/DHTtester.ino
 
 #include <DHT.h>
