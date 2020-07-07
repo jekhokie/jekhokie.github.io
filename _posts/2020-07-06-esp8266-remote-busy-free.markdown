@@ -12,6 +12,12 @@ for added fun (if kids are involved), there is an RFID reader where you can scan
 will flash a few times indicating the current status. Because it's remotely controlled, you can place this anywhere within WiFi reach and
 control it remotely from your phone, laptop, etc.
 
+### Pre-Baked Files
+
+The scripts/functionality required for this post have been uploaded to
+[this repository folder](https://github.com/jekhokie/electronicsbox/tree/master/esp8266--busy-free-indicator) for ease of development - you can
+use this as a starting point during this tutorial when the respective code is referenced.
+
 ### Parts Needed
 
 This post assumes you can leverage constructing the programming board detailed in [this]({% post_url 2019-01-25-esp8266-temp-sensor %}) previous
