@@ -5,6 +5,7 @@ gem "ffi", ">= 1.9.24"
 
 # to avoid security vulnerability
 gem "activesupport", ">= 6.0.3.1"
+gem "kramdown", ">= 2.3.0"
 
 group :jekyll_plugins do
   gem "github-pages"
