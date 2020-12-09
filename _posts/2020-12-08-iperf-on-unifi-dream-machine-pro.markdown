@@ -22,7 +22,7 @@ First, ensure SSH login is enabled for your devices. You can do this through the
 
 Next, follow [these instructions](https://github.com/boostchicken/udm-utilities/blob/master/on-boot-script/README.md#steps) to bootstrap the ability
 to run scripts on boot of the Dream Machine Pro. After SSH-ing to your Dream Machine Pro as the root user, run the following commands to install the
-boot functionality via RPM, which will enable the functionality to persist between firmware upgrades since Unifi (at the time of this post) does not
+boot functionality via a package, which will enable the functionality to persist between firmware upgrades since Unifi (at the time of this post) does not
 wipe package-installed contents:
 
 ```bash
