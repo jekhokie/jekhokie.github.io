@@ -72,11 +72,13 @@ Container networking should now be configured and ready so you can launch contai
 ## iPerf3 Server Container
 
 Once you have the container networking script written and run for your session, you can pull down a Docker image that contains an ARM64-compatible
-version of iPerf3, referenced here as `<IPERF_CONTAINER>`. It's recommended you pin this to a version that you wish to use so you don't automatically
-get "latest" and can store the image in the container cache on the Dream Machine Pro to help avoid malicious code injection by the provider when
-the image is updated. The following command will both pull down the image (in this case, "latest" - again, not recommended) and start an iPerf server
-in the foreground that you can use to test quickly - specifying `:latest` is for illustrative purposes only and should again be updated to reflect the
-version/digest you wish to use:
+version of iPerf3, referenced here as `<IPERF_CONTAINER>`. If you don't have your own image available, you can obtain one through [DockerHub](https://hub.docker.com/)
+and searching for an iPerf3 container image for ARM64 architecture, understanding that these images are generally acceptable but vary in terms of
+stability, security vulnerability checks, etc. (use at your own risk). It's also recommended you pin this image to a version that you wish to use so
+you don't automatically get "latest" and can store the image in the container cache on the Dream Machine Pro to help avoid malicious code injection by
+the provider when the image is updated. The following command will both pull down the image (in this case, "latest" - again, not recommended) and start
+an iPerf server in the foreground that you can use to test quickly - specifying `:latest` is for illustrative purposes only and should again be updated
+to reflect the version/digest you wish to use:
 
 ```bash
 $ podman run --name=iperf3-server -p 5201:5201 -p 5201:5201/udp <IPERF_CONTAINER>:latest -s
@@ -107,9 +109,9 @@ still functions to the Dream Machine Pro - if so, congratulations, you now have 
 If you have issues connecting to the iPerf3 server on the Dream Machine Pro, SSH to the device and check podman status for containers to ensure the
 container launched correctly (logs, etc.). There is likely something strange with the container configuration that is causing it to fail to launch.
 
-## iPerf3 Packages for Server
+## iPerf3 Client
 
-If you wish to run an iPerf3 client or server manually on your Dream Machine Pro (or set up some other auto-launching mechanism different from the
+If you wish to run an iPerf3 client manually on your Dream Machine Pro (or set up some other auto-launching mechanism different from the
 description above), you can also do so fairly easily by installing the iPerf3 packages. Log into your Dream Machine Pro and install the respective
 packages:
 
@@ -118,7 +120,9 @@ $ unifi-os shell
 $ apt-get install iperf3
 ```
 
-Following the above commands, you can launch an iPerf server or client functionality to test various endpoints in your network.
+Following the above commands, you can launch an iPerf client functionality to test various endpoints in your network. While you could theoretically run
+this in server form as well, it would likely require manipulating port settings on the Dream Machine Pro which could be brittle and cause issues or be
+removed on reboot altogether.
 
 ### Credit
 
