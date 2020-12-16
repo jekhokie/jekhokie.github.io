@@ -173,6 +173,50 @@ Now reboot the Pi device. If all goes well, the OLED should automatically be pop
 gets an IP address, and is able to connect to the internet. If something appears to have gone wrong, investigate the logs in `/var/log` for
 clues.
 
+## Troubleshooting
+
+There is a possibility when running the `display_stock.py` script you will get an error related to the `numpy` package (especially if you're running on a Pi
+Zero or similar) that looks like the following:
+
+```bash
+Traceback (most recent call last):
+  File "display_stock.py", line 10, in <module>
+    from yahoo_fin import stock_info
+  File "/home/pi/stock-watcher/.env/lib/python3.7/site-packages/yahoo_fin/__init__.py", line 3, in <module>
+    import pandas as pd
+  File "/home/pi/stock-watcher/.env/lib/python3.7/site-packages/pandas/__init__.py", line 17, in <module>
+    "Unable to import required dependencies:\n" + "\n".join(missing_dependencies)
+ImportError: Unable to import required dependencies:
+numpy:
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.7 from "/home/pi/stock-watcher/.env/bin/python"
+  * The NumPy version is: "1.19.4"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: libf77blas.so.3: cannot open shared object file: No such file or directory
+```
+
+A potential fix is documented in the link detailed in the error - what worked well on the Pi Zero that was being used when this was written was to
+perform the following, which resulted in being able to then successfully launch the `display_stock.py` script:
+
+```bash
+$ sudo apt-get install libatlas-base-dev
+```
+
 ### Credit
 
 The above tutorial was pieced together with some information from the following sites/resources, among others that were likely missed in this list:
