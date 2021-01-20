@@ -171,6 +171,7 @@ primary state - things are working well now!
 
 If things didn't exactly go as planned, it's possible your Postfix configurations are not correct. Try to troubleshoot by
 sending emails from the command line like so, replacing `<NOTIFY_EMAIL>` with the email where you expect messages to be sent.
+Note that this command requires the `mailtools` package to be installed via `sudo apt-get -y install mailtools`.
 Investigate the logs in `/var/log/messages` once the below command is issued to see what might be going wrong with the
 configuration:
 
