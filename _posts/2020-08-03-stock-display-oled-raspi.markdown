@@ -79,12 +79,14 @@ Now that the dependencies are installed, go ahead and create a file named `displ
 ```python
 #!/usr/bin/env python3
 
-import time
-import subprocess
-import board
-import digitalio
-import busio
 import adafruit_ssd1306
+import board
+import busio
+import digitalio
+import socket
+import subprocess
+import time
+from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 from yahoo_fin import stock_info
 
@@ -115,32 +117,42 @@ try:
     while True:
         print("Querying stock...")
 
+        # get the date/time for update
+        update_datetime = datetime.now()
+        update_time = update_datetime.strftime('%I:%M:%S')
 
         # get stock information
-        quote = stock_info.get_quote_table(TICKER_SYMBOL)
-        price = round(quote['Quote Price'], 2)
-        prev_close = round(quote['Previous Close'], 2)
-        delta = round(price - prev_close, 2)
-        symbol = '\u25b2' if delta >= 0 else '\u25bc'   # display up/down arrow based on movement
+        try:
+            quote = stock_info.get_quote_table(TICKER_SYMBOL)
+            price = round(quote['Quote Price'], 2)
+            prev_close = round(quote['Previous Close'], 2)
+            delta = round(price - prev_close, 2)
+            symbol = '\u25b2' if delta >= 0 else '\u25bc'   # display up/down arrow based on movement
 
-        # convert to strings to display/handle display
-        price_str = str(price)
-        delta_str = str(delta)
+            # convert to strings to display/handle display
+            price_str = str(price)
+            delta_str = str(delta)
 
-        # calculate positioning
-        (price_font_width, price_font_height) = price_font.getsize(price_str)
-        (diff_font_width, diff_font_height) = diff_font.getsize(delta_str)
+            # calculate positioning
+            (price_font_width, price_font_height) = price_font.getsize(price_str)
+            (diff_font_width, diff_font_height) = diff_font.getsize(delta_str)
 
-        # clear and draw stock info to screen
-        draw.rectangle((0, 0, OLED_WIDTH, OLED_HEIGHT), outline=0, fill=0)
-        draw.text((oled.width // 2 - ticker_font.getsize(TICKER_SYMBOL)[0] // 2, 0), TICKER_SYMBOL, font=ticker_font, fill=255)
-        draw.text((oled.width // 2 - price_font_width // 2, oled.height // 2 - price_font_height // 2), "${}".format(price_str), font=price_font, fill=255)
-        draw.text((oled.width // 2 - diff_font_width // 2, OLED_HEIGHT - diff_font_height), "{} ${}".format(symbol, delta_str), font=diff_font, fill=255)
-        oled.image(image)
-        oled.show()
+            # clear and draw stock info to screen
+            draw.rectangle((0, 0, OLED_WIDTH, OLED_HEIGHT), outline=0, fill=0)
+            draw.text((0, 0), TICKER_SYMBOL, font=ticker_font, fill=255)
+            draw.text((oled.width - diff_font.getsize(update_time)[0], 0), update_time, font=diff_font, fill=255)
+            draw.text((oled.width // 2 - price_font_width // 2, oled.height // 2 - price_font_height // 2), "${}".format(price_str), font=price_font, fill=255)
+            draw.text((oled.width // 2 - diff_font_width // 2, OLED_HEIGHT - diff_font_height), "{} ${}".format(symbol, delta_str), font=diff_font, fill=255)
+            oled.image(image)
+            oled.show()
+
+            print("Done!")
+        except socket.gaierror as e:
+            print("Failure to get stock quote - DNS error: {}".format(str(e)))
+        except Exception as e:
+            print("Failure to get/process stock quote - unknown error: {}".format(str(e)))
 
         # sleep between queries
-        print("Done!")
         time.sleep(5)
 except KeyboardInterrupt:
     print("SIGINT detected - releasing screen")
