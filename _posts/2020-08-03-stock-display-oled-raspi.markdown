@@ -67,6 +67,7 @@ $ . .env/bin/activate
 # install python dependencies
 $ pip install adafruit-blinka \
               adafruit-circuitpython-ssd1306 \
+              html5lib \
               Pillow \
               requests \
               requests_html \
