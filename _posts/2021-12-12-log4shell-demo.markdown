@@ -14,6 +14,9 @@ the issue and protect their infrastructure. This IS NOT intended to be used in a
 
 ## Background
 
+**WARNING**: This article is largely out of date regarding the correct version to upgrade log4j to and the outstanding CVEs. Please consult
+the official CVE site to learn more about the recommended version to upgrade log4j to.
+
 The Log4Shell vulnerability is a Remote Code Execution (RCE) vulnerability that allows an attacker to inject and execute arbitrary code loaded
 from an LDAP server when JNDI message lookup is enabled and user-provided parameters are passed to the logging framework. As an example, the
 user can provide (for example) an LDAP URI via the `User-Agent` parameter in web requests that point to an attacker-controlled LDAP server, which
@@ -40,7 +43,7 @@ To get started, clone the repository with the example application:
 
 ```bash
 $ git clone https://github.com/jekhokie/scriptbox.git
-$ cd scriptbox/java--spring-boot-webapp-log4shell-test/
+$ cd scriptbox/java--spring-boot-webapp-log4shell-test/log4shell-app-2.8.2-vulnerable/
 ```
 
 The `pom.xml` file contains a dependency in it referencing `log4j-core` version 2.13.0 - the `log4j-core` package is where the JNDI lookup
